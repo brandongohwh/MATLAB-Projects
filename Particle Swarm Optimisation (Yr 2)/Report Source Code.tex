@@ -1,0 +1,685 @@
+
+% This LaTeX was auto-generated from MATLAB code.
+% To make changes, update the MATLAB code and republish this document.
+
+\documentclass{article}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{exsheets,hyperref}
+\usepackage{amssymb,amsmath,amsopn}
+\usepackage{graphicx}
+% \usepackage[a4paper, total={6.2in,9.2in}]{geometry}
+\usepackage{listings}
+\usepackage[T1]{fontenc} % recommended for languages with accents
+\usepackage[utf8]{inputenc}
+\usepackage{matlab-prettifier}
+\usepackage{comment}
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\newcommand{\highlight}[1]{\colorbox{yellow}{$\displaystyle #1$}}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\lstset{
+    frame=single,
+    %breaklines=true,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    numbers=left,
+}
+
+
+\sloppy
+\definecolor{lightgray}{gray}{0.5}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+%\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    %breaklines=true,%
+    %morekeywords={matlab2tikz},
+    %keywordstyle=\color{blue},%
+    %morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    %identifierstyle=\color{black},%
+    %stringstyle=\color{mylilas},
+    %commentstyle=\color{mygreen},%
+    %showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    %numbers=left,%
+    %numberstyle={\tiny \color{black}},% size of the numbers
+    %numbersep=9pt, % this defines how far the numbers are from the text
+    %emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style}, 
+    %basicstyle=\ttfamily,
+%}
+\section*{Particle Swarm Optimisation}
+
+\section*{Contents}
+\begin{itemize}
+\setlength{\itemsep}{-0.5ex}
+   \item Summary
+   \item Model Construction
+   \item Theory: Particle Swarm Optimisation
+   \item Curve Fitting: Implementing Optimisation Algorithm
+   \item Considerations
+   \item Results
+   \item Appendix
+\end{itemize}
+
+\subsection*{Summary}
+\begin{par}
+The scope of this project is to use the given data (Conroy 1999) that exhibits the small island effect and derive a suitable mathematical equation and its respective parameters such that it reflects the relationship between the number of species against the natural logarithm of area. We have found that the following model fits the data best: \\\\
+Define the following:
+\end{par}
+\begin{itemize}
+\setlength{\itemsep}{-0.5ex}
+\item $X$ is given by  $ln(Area)$
+\item $f(X)=4+\frac{a(X+b)}{\pi} (\tan^{-1}(a(X-c))+\frac{\pi}{2})$
+\end{itemize}
+%\vspace{0.6em}
+\begin{par}
+
+Further employing the use of Particle Swarm Optimisation, we were able to find the parameters such that the Least Squares Errors was the minimum. This indicated that the proposed model, with the found parameters are the best candidate for the provided data.
+\end{par}
+\subsection*{Model Construction}
+%\begin{align*}
+%    \includegraphics [width=4in]{scatterplot_01.eps}
+%\end{align*}
+%\begin{center}
+%Plot of sample data
+%\end{center}
+%\newpage
+\begin{par}
+To meet the requirements, the model must fulfill the following criterions:
+\end{par}
+\begin{enumerate}[label=\Roman*.]
+\setlength\itemsep{-0.5ex}
+    \item There should be 2-4 parameters
+    \item The model should be non-linear
+    \item There exists a horizontal asymptote for negative values of X
+    \item There exists a slant asymptote for positive values of X
+\end{enumerate}
+\vspace{0.6em}
+\begin{par}
+The difficulty is to find a nonlinear expression with two asymptotes. After considering exponential, polynomial and trigonometrical models, we decided to follow through with a trigonometrical model involving $tan^{-1}$. $tan^{-1}$ was specifically chosen because $tan^{-1}$ has two asymptotes, $y = -\frac{\pi}{2}$ and $y = \frac{\pi}{2}$. As we can easily see, $(tan^{-1}(X) + \frac{\pi}{2})*Linear(X)$ will give a linear function as $X \to\infty$ and $0$ as $X \to -\infty$. Based on this idea, we arrived at equation (1).
+\end{par}
+\vspace{0.6em}
+\begin{equation}
+f(X)=e+\frac{a(X+b)}{\pi}(\tan^{-1}(d(X-c))+\frac{\pi}{2})
+\end{equation}
+\vspace{-0.1ex}
+\begin{par}
+It can be easily verified that $f(X) \to e$ as $X \to -\infty$, while $f(X) \to a(X+b) + e$ as $X \to \infty$. To simplify this model, notice that $a$ denotes the slope of the second asymptote and $d$ denotes the rate of change at the 'turning point'. As we expected, the steeper the second asymptote, the sharper the 'turning point' is. As a result, we may assume $d=a$.   
+\end{par}
+\vspace{0.6em}
+\begin{par}
+As we subsequently found out, if we do not set $a$ to be a constant value, the best fit curve will just be a straight line which is not desired. To make the 'turning point' appear within the domain of the data set, we must deliberately fix $a$. After some adjustments, we set $e = 4$. Then we arrive at equation (2).
+\end{par}
+\vspace{0.6em}
+\begin{equation}
+f(X)=4+\frac{a(X+b)}{\pi}(\tan^{-1}(a(X-c))+\frac{\pi}{2})
+\end{equation}
+
+\vspace{0.6em}
+\begin{par}
+To show that our function is continuously differentiable, we only need to should that $tan^{-1}$ is continuously differentiable which is trivial.
+\end{par}
+\begin{equation*}
+\frac{d}{dX} tan^{-1}(X) = \frac{1}{1+X^{2}}
+\end{equation*}
+\begin{par}
+This ensures $f(X)$ to be continuously differentiable.
+\end{par}
+
+
+\subsection*{Theory: Particle Swarm Optimisation}
+\begin{par}
+Particle Swarm Optimisation (PSO) is a stochastic optimisation technique originally intended for emulating the social behaviour of bird flocks or fish schools. This method works by iteratively trying to improve a candidate solution within a given measure of quality. This problem is solved by having a large number of particles move around within a defined space, also known as a $search$ $space$. Each particle is affected by its best known position, current position and velocity and these factors are further constrained by the proposed model and its search space. The movement of the swarm of particles is expected to converge towards the best solution over multiple iterations.
+\end{par}
+\vspace{0.6em}
+\begin{par}
+To determine our search space, we must consider our proposed model and determine the domain of all the 3 parameters $a,b,c$. Since $f(X)$ is defined as the number of species, $f(X)\geq0$,  $\forall X \in\mathbb{R}_0^+$
+\end{par}
+\vspace{0.6em}
+\begin{par}
+As discussed earlier, $f(X) \to a(X+b) + 4$ as $X \to \infty$. It is easily understood that $a$ must be positive since the asymptote should be increasing as $X\to\infty$. We  also notice that the term $tan^{-1}(X-c)$ is actually a translation of $tan^{-1}(X)$ of $+c$ units in the direction of the X-axis. The turning point of the function should be on the right side of y-axis, so $c$ must be positive. There is no constrain on the domain of parameter $b$.
+\end{par}
+\vspace{0.6em}
+\begin{par}
+Hence, we have found that 2 parameters $a,c$ must be positive. We limit our search space within the domain $(0,10]^2\subset \mathbb{R}^2$ for $a,c$ and $[-10,10]\subset \mathbb{R}$ for $b$. To ensure that the found parameters have the best conformity to the data provided, we must ensure that the Least Squares Error (LSE) is minimised. To do that, we depend on the following equation:
+\end{par}
+\begin{equation*}
+    E(a,b,c)=\sum_{i=1}^{n}(f(X)-f(X_i,a,b,c))^2
+\end{equation*}
+\begin{par}
+where $n$ represents the number of particles.
+\end{par}
+\subsection*{Curve Fitting: Implementing Optimisation Algorithm}
+
+\vspace{0.6em}
+\begin{par}
+\circled{1} \textbf{Generate Particles}\\
+\end{par}
+\begin{par}
+Before the implementation of the PSO algorithm, we must first generate particles to move around the search space. Generating a large number of particles is better as each particle emulates a body within a swarm and a larger swarm translates to a greater probability that the LSE is minimised and conformity between the equation and data is increased. For this, we will set the number of particles involved to be $n=100$. (Appendix C)\\
+\end{par}
+\begin{par}
+\circled{2} \textbf{Assign Particle Position, Velocity \& Calculate LSE}
+\end{par}
+\vspace{0.6em}
+\begin{par}
+To start the algorithm, each particle must have a position and velocity assigned to it. To do this, we must generate a random number for each of the parameters and velocity constituents using a uniform distribution. The number generated must additionally be contained within the search space. To do this, we make use of the built-in function \texttt{\color{blue}rand}. (Appendix D)\\
+\end{par}
+
+\begin{par}
+After that, we need to ensure that all 100 particles have their position and velocity generated, therefore we need to populate the rest of the matrix by looping (repeating) step 2. After that, we calculate the LSE for each of the particles according to the previously mentioned equation: (Appendix E)\\
+\end{par}
+\vspace{0.6em}
+\begin{equation*}
+    E(a,b,c)=\sum_{i=1}^{n}(f(X)-f(X_i,a,b,c))^2
+\end{equation*}
+\vspace{0.6em}
+\begin{par}
+\circled{3} \textbf{Initialise Best Current \& Global Position Vectors}
+\end{par}
+\vspace{0.6em}
+\begin{par}
+Within the particle position and velocity matrix, we now need to search for the row with the lowest LSE using the function \texttt{\color{blue} min} and tentatively assign the row values to the current best and global best vectors. (Appendix F)\\
+\end{par}
+
+\newpage
+\begin{par}
+\circled{4} \textbf{Generate New Particle Velocity \& Update Particle Position}
+\end{par}
+\vspace{0.6em}
+\begin{par}
+To emulate the movement of a swarm, we have to calculate new velocities for the movement of each particle. To generate the new velocity of the particles, we make use of the following equation: (Appendix G)\\
+\end{par}
+\begin{equation*}
+    \overline{v_{new}}=\omega\overline{v_{old}}+c_{1}\overline{\psi_{1}}(\overline{p_{best}}-\overline{p_{current}})+c_2\overline{\psi_{2}}(\overline{g_{best}}-\overline{p_{current}})
+\end{equation*}
+\begin{itemize}
+\setlength{\itemsep}{-0.1ex}
+\item $\overline{v}$ represents the particle velocity with respect to its parameters $a,b,c$
+\item $\omega$ represents the inertia weight used to control the velocity.
+\item $c_1$ is a constant and represents the cognitive scaling parameter.
+\item $c_2$ is another constant and represents the social scaling parameter.\\
+*Typically, $c_1=c_2$
+\item $\psi_1,\psi_2$ are column vectors with randomly generated entries from the uniform distribution between $[0,1]$
+\item $\overline{p_{current}}$ represents the position vector of the particle at the current position.
+\item $\overline{p_{best}}$ represents the position vector of the particle at the best position.
+\item $\overline{g_{best}}$ represents the position vector of all particles at the best position.
+\end{itemize}
+\begin{par}
+For the above-mentioned equation, we require the particles to converge towards a local minimum after multiple ($1000$) loops. After some trials, we decided to use the values $\omega=0.8$, $c_1=~c_2=~1.4$.
+\end{par}
+\vspace{0.6em}
+\begin{par}
+Using the new velocity generated by the previously stated equation, we need to update the position of the particle by adding the old position and its newly generated velocity. This can also be written into the following equation: (Appendix G)\\
+\end{par}
+\begin{equation*}
+\overline{p_{new}}=\overline{v_{new}}+\overline{p_{old}}
+\end{equation*}
+\vspace{0.6em}
+\begin{par}
+\circled{5} \textbf{Run the Algorithm by Looping Multiple Times}
+\end{par}
+\vspace{0.6em}
+\begin{par}
+We repeat the algorithm 1000 times to ensure that we can find the best possible solutions of the particles with the least LSE. This will also lead us to obtaining the best parameters that are suitable for the model (Appendix G). 
+\end{par}
+\vspace{0.6em}
+
+\subsection*{Considerations}
+\vspace{0.6em}
+\begin{par}
+\circled{1} \textbf{Position Bounds}
+\end{par}
+\vspace{0.6em}
+\begin{par}
+During the updating of the new velocity and position of the particles, we must ensure that the position and velocity are bounded within the domain of the parameters. For example, considering the parameter $b$, since it has been defined that $b\in [-10,10]\subset \mathbb{R}$, the position bounds are $-10\leq p_{b}\leq 10$ and the velocity bounds are $-20\leq v_{b}\leq 20$.
+\end{par}
+\vspace{0.6em}
+\begin{par}
+\circled{2} \textbf{Universal Minimum}
+\end{par}
+\vspace{0.6em}
+\begin{par}
+It must be considered that the first round of PSO algorithm may not provide the solution to the global minimum due to instances where there may be more than $1$ local minimum. In such cases, the particles will converge towards that local minimum and other local minimums, which may be a global minimum is severely neglected. Therefore, to provide a workaround to this problem, it is suggested that we re-run the algorithm multiple times from scratch to sufficiently ensure that the results are essentially optimised with the lowest possible LSE and stored into the universal best vector. For this, we run PSO 10 times. (Appendix H)
+\end{par}
+\subsection*{Results}
+\begin{par}
+After implementing the PSO algorithm, we were able to obtain the universal best equation with the following parameters:
+\end{par}
+\begin{align*}
+\begin{tabular}{c c c}
+$a=0.924794$ & $b=1.009460$ & $c=5.328689$
+\end{tabular}
+\end{align*}
+\begin{par}
+Substituting the obtained parameters into our proposed model gives us the following equation:
+\end{par}
+\begin{equation*}
+    f(X)=4+\frac{0.924794(X+1.009460)}{\pi} (\tan^{-1}(0.924794(X-5.328689))+\frac{\pi}{2})
+\end{equation*}
+\begin{par}
+As well as the following LSE:
+\end{par}
+\begin{equation*}
+    E(a,b,c)=\sum_{i=1}^{n}(f(X)-f(X_i,a,b,c))^2=290.313288
+\end{equation*}
+\begin{par}
+Using the found parameters and the proposed model, we are able to visualise the curve and its relationship to the data by plotting a graph. Furthermore, the 2 asymptotes further emphasises the shape of the curve for $X \to -\infty$ and $X \to \infty$. A bigger image can be found within Appendix L:
+\end{par}
+\vspace{0.6em}
+\begin{align*}
+    \includegraphics [width=2in]{Proj2_01.eps}
+\end{align*}
+\begin{center}
+{\footnotesize Plot of sample data with the best fit curve and asymptotes.}
+\end{center}
+
+\newpage
+\section*{Appendix}
+\begin{enumerate}[label=\Alph*.]
+\setlength{\itemsep}{-0.6ex}
+   \item Provided Sample Data
+   \item Data Processing
+   \item Defining Variables To Be Used
+   \item Generate Random Position \& Velocity Function
+   \item Initialising Matrices, Particles Starting Position \& Velocity
+   \item Finding and Assigning Best Value
+   \item Updating Particle Position \& Velocity over 1000 loops
+   \item Ensure Universal Minimum
+   \item Plotting of Data Points \& Graphs
+   \item Output of Current Code
+   \item Complete code with Sub-functions
+   \item Plot Graphic
+\end{enumerate}
+
+\subsection*{A. Provided Sample Data}
+\begin{align*}
+\begin{tabular}{|c|c|c|}
+  \hline
+  Area $(km^2)$ & $ln(Area)$ $(km^2)$ & Number of Species \\
+  \hline
+  3024.2 & 8.0144 & 17 \\
+  \hline
+547.1 & 6.3046 & 17 \\
+\hline
+569	& 6.3439 & 16 \\
+\hline
+889.3 & 6.7904 & 14 \\
+\hline
+2822 & 7.9452 & 14 \\
+\hline
+1933.1 & 7.5669 & 13 \\
+\hline
+4309.7 & 8.3686 & 9 \\
+\hline
+5777.5 & 8.6617 & 9 \\
+\hline
+472.3 & 6.1576 & 8 \\
+\hline
+658.2 & 6.4895 & 7 \\
+\hline
+5448.9 & 8.6032 & 7 \\
+\hline
+202.6 & 5.3112 & 8 \\
+\hline
+232.9 & 5.4506 & 7 \\
+\hline
+4162.6 & 8.3339 & 6 \\
+\hline
+482.2 & 6.1784 & 6 \\
+\hline
+446.5 & 6.1014 & 5 \\
+\hline
+85.2 & 4.4450 & 5 \\
+\hline
+12.1 & 2.4932 & 5 \\
+\hline
+135 & 4.9053 & 5 \\
+\hline
+189 & 5.2417 & 5 \\
+\hline
+91.1 & 4.5120 & 5 \\
+\hline
+155.3 & 5.0454 & 4 \\
+\hline
+50.6 & 3.9240 & 4 \\
+\hline
+10.1 & 2.3125 & 3 \\
+  \hline
+\end{tabular}
+\end{align*}
+
+\subsection*{B. Data Processing}
+\begin{lstlisting}[style=Matlab-editor]
+%Import data and filter out numbers
+[num,txt,raw]=xlsread('data.xlsx');
+
+%Take ln of the Area
+num(:,3)=log(num(:,1));
+
+xdata=num(:,3); % Equate x-axis to Ln(Area)
+ydata=num(:,2); % Equate y-axis to No. of Species
+\end{lstlisting}
+
+\subsection*{C. Defining Variables To Be Used}
+\begin{lstlisting}[style=Matlab-editor]
+psorun=10; % Define no. of times PSO repeats from the beginning
+particlenum = 100; % Define no. of particles to be used
+repeatnum = 1000; % Define no. of iterations the table should update
+\end{lstlisting}
+
+\subsection*{D. Generate Random Position \& Velocity Function}
+\begin{lstlisting}[style=Matlab-editor]
+function [a,b,c,va,vb,vc]=rndgen()
+
+a=10*rand();
+va=10*rand();
+b=-10+(10+10)*rand();
+vb=-10+(10+10)*rand();
+c=10*rand();
+vc=10*rand();
+
+end
+\end{lstlisting}
+
+\newpage
+
+\subsection*{E. Initialising Matrices, Particles Starting Position \& Velocity}
+\begin{lstlisting}[style=Matlab-editor]
+% PSO Table:
+% [a,b,c,va,vb,vc,lse]
+for i=1:particlenum
+    [a,b,c,va,vb,vc]=rndgen(); % Send to function to generate numbers
+    pgen(i,:)=[a,b,c,va,vb,vc,0]; %Populate every row of PSO table
+    pgen(i,7)=sum((ydata-(4+(pgen(i,1).*(xdata+pgen(i,2))).*(1/pi)...
+         .*(atan(pgen(i,1).*(xdata-pgen(i,3)))+(pi/2)))).^2);
+end
+\end{lstlisting}
+
+
+
+
+\subsection*{F. Finding and Assigning Best Value}
+\begin{lstlisting}[style=Matlab-editor]
+findbestval=(find(min(pgen(:,7))==pgen(:,7)));
+
+% Current and global best matrix initialisation:
+% [bestlse(a),bestlse(b),bestlse(c),bestlse(a,b,c)]
+cbest=[pgen(findbestval,1:3),pgen(findbestval,7)];
+gbest=cbest;
+\end{lstlisting}
+
+
+
+
+\subsection*{G. Updating Particle Position \& Velocity over 1000 loops}
+\begin{lstlisting}[style=Matlab-editor]
+wght=0.8;
+lf=1.4;
+% Updating values
+for i=1:repeatnum
+    for j=1:particlenum
+        % Generate New Velocity
+        pgen(j,4:6)=wght*pgen(j,4:6)+lf*rand(1,3)...
+            .*(cbest(1:3)-pgen(j,1:3))+lf*rand(1,3)...
+            .*(gbest(1:3)-pgen(j,1:3));
+            
+        % Generate New Position
+        pgen(j,1:3)=pgen(j,1:3)+pgen(j,4:6);
+
+        % Position Bounds Check
+        if pgen(j,1)<0||pgen(j,1)>10||pgen(j,2)<-10||pgen(j,2)>10||...
+                pgen(j,3)<0||pgen(j,3)>10
+            [a,b,c,va,vb,vc]=rndgen();
+            pgen(j,1)=a;
+            pgen(j,2)=b;
+            pgen(j,3)=c;
+            pgen(j,4)=va;
+            pgen(j,5)=vb;
+            pgen(j,6)=vc;
+        end
+        
+        % LSE Error
+        pgen(j,7)=sum((ydata-(4+(pgen(j,1).*(xdata+pgen(j,2)))...
+            .*(1/pi).*(atan(pgen(j,1).*(xdata-pgen(j,3)))+(pi/2))))...
+            .^2);
+        end
+
+        % Find row with minimum LSE and store in current best matrix
+        findbestval=(find(min(pgen(:,7))==pgen(:,7)));
+        cbest=[pgen(findbestval,1:3),pgen(findbestval,7)];
+        
+        % Check whether current particle LSE is lower than global particle LSE
+        if cbest(4)<gbest(4)
+            gbest=cbest;
+        end
+
+    end
+end
+\end{lstlisting}
+
+
+\subsection*{H. Ensure Universal Minimum}
+\begin{lstlisting}[style=Matlab-editor]
+% Run PSO multiple times
+for k=1:psorun
+
+    <Code from Updating Particle Position & Velocity over 1000 loops>
+    
+    % Initialise universal matrix if in first loop
+    if k==1
+        ggbest=gbest;
+    else % Otherwise check whether global LSE < universal LSE
+        if gbest(4)<ggbest(4)
+            ggbest=gbest;
+        end
+    end
+end
+\end{lstlisting}
+
+\subsection*{I. Plotting of Data Points \& Graphs}
+\begin{lstlisting}[style=Matlab-editor]
+% Plotting of graph
+x=[0:0.01:10]; %Define region to plot
+x1 = 4+(ggbest(1).*(x+ggbest(2))).*(1/pi).*(atan(ggbest(1).*(x-ggbest(3)))+(pi/2));
+plot(x,x1,'r');
+grid on
+hold on
+
+% Horizontal asymptote
+fplot(4,[0,10],'b')
+
+% Slant asymptote
+slantasymp=4+(ggbest(1).*(x+ggbest(2)));
+plot(x,slantasymp,'m');
+
+% Scatter plot of data
+scatter(xdata,ydata,5,'filled');
+
+% Define axes
+axis([2 9 2 18]);
+
+% Define legend & location
+lgd = legend('f(X)','Horizontal Asymptote','Slant Asymptote','Data Points');
+lgd.Location='northwest';
+
+% Define all graph labels
+xlabel('ln(Area)');
+ylabel('Number of Species');
+\end{lstlisting}
+
+\newpage
+
+\subsection*{J. Output of Current Code}
+\begin{lstlisting}[style=Matlab-editor]
+fprintf('PSO has found the following parameters to be the best:\n\n');
+fprintf('   a: %f\n   b: %f\n   c: %f\n LSE: %f\n\n'...
+    ,ggbest(1),ggbest(2),ggbest(3),ggbest(4));
+\end{lstlisting}
+\begin{lstlisting}[style=Matlab-editor]
+PSO has found the following parameters to be the best:
+
+   a: 0.924794
+   b: 1.009460
+   c: 5.328689
+ LSE: 290.313288
+\end{lstlisting}
+
+
+\subsection*{K. Complete code with Subfunctions}
+\begin{lstlisting}[style=Matlab-editor]
+%Import data and filter out numbers
+[num,txt,raw]=xlsread('data.xlsx');
+
+%Take ln of the Area
+num(:,3)=log(num(:,1));
+
+xdata=num(:,3); % Equate x-axis to Ln(Area)
+ydata=num(:,2); % Equate y-axis to Number of Species
+
+% Particle Swarm Optimisation
+% Initialise variables
+
+% Initialise tables of variables
+psorun=10; % Define no. of times PSO repeats from the beginning
+particlenum = 100; % Define no. of particles to be used
+repeatnum = 1000; % Define no. of iterations the table should update
+
+pgen=zeros(particlenum,7);
+
+% Run PSO multiple times
+for k=1:psorun
+
+    % PSO Table:
+    % [a,b,c,va,vb,vc,lse]
+    for i=1:particlenum
+        [a,b,c,va,vb,vc]=rndgen(); % Send to function to generate numbers
+        pgen(i,:)=[a,b,c,va,vb,vc,0]; %Populate every row of PSO table
+        pgen(i,7)=sum((ydata-(4+(pgen(i,1).*(xdata+pgen(i,2))).*(1/pi)...
+        .*(atan(pgen(i,1).*(xdata-pgen(i,3)))+(pi/2)))).^2); %LSE Error
+    end
+
+    findbestval=(find(min(pgen(:,7))==pgen(:,7)));
+
+    % Current and global best matrix initialisation:
+    % [bestsse(a),bestsse(b),bestsse(c),bestsse]
+    cbest=[pgen(findbestval,1:3),pgen(findbestval,7)];
+    gbest=cbest;
+
+    wght=0.8; % Weight
+    lf=1.4; % Learning factor
+    % Updating values
+    for i=1:repeatnum
+        for j=1:particlenum
+            % Generate New Velocity
+            pgen(j,4:6)=wght*pgen(j,4:6)...
+                +lf*rand(1,3).*(cbest(1:3)-pgen(j,1:3))...
+                +lf*rand(1,3).*(gbest(1:3)-pgen(j,1:3));
+            
+            % Generate New Position
+            pgen(j,1:3)=pgen(j,1:3)+pgen(j,4:6);
+
+            % Position Bounds Check
+            if pgen(j,1)<0||pgen(j,1)>10||pgen(j,2)<0||pgen(j,2)>10||...
+                    pgen(j,3)<-10||pgen(j,3)>10
+                [a,b,c,va,vb,vc]=rndgen();
+                pgen(j,1)=a;
+                pgen(j,2)=b;
+                pgen(j,3)=c;
+                pgen(j,4)=va;
+                pgen(j,5)=vb;
+                pgen(j,6)=vc;
+            end
+            
+            %LSE Error
+            pgen(j,7)=sum((ydata-(4+(pgen(j,1).*(xdata+pgen(j,2))).*(1/pi)...
+            .*(atan(pgen(j,1).*(xdata-pgen(j,3)))+(pi/2)))).^2); 
+        end
+
+        % Find row with minimum LSE and store in current best matrix
+        findbestval=(find(min(pgen(:,7))==pgen(:,7)));
+        cbest=[pgen(findbestval,1:3),pgen(findbestval,7)];
+        
+        %Check whether current particle LSE is lower than global particle LSE
+        if cbest(4)<gbest(4)
+            gbest=cbest;
+        end
+    end
+
+    % Initialise universal matrix if in first loop
+    if k==1
+        ggbest=gbest;
+    else % Otherwise check whether global LSE < universal LSE
+        if gbest(4)<ggbest(4)
+            ggbest=gbest;
+        end
+    end
+end
+
+% Plotting of graph
+x=[0:0.01:10]; %Define region to plot
+x1 = 4+(ggbest(1).*(x+ggbest(2))).*(1/pi).*(atan(ggbest(1).*(x-ggbest(3)))+(pi/2));
+plot(x,x1,'r');
+grid on
+hold on
+
+% Horizontal asymptote
+fplot(4,[0,10],'b');
+
+% Slant asymptote
+slantasymp=4+(ggbest(1).*(x+ggbest(2)));
+plot(x,slantasymp,'m');
+
+% Scatter plot of data
+scatter(xdata,ydata,5,'filled');
+
+% Define axes
+axis([2 9 2 18]);
+
+% Define legend & location
+lgd = legend('f(X)','Horizontal Asymptote','Slant Asymptote','Data Points');
+lgd.Location='northwest';
+
+% Define all graph labels
+xlabel('ln(Area)');
+ylabel('Number of Species');
+
+fprintf('PSO has found the following parameters to be the best:\n\n');
+fprintf('   a: %f\n   b: %f\n   c: %f\n LSE: %f\n\n'...
+    ,ggbest(1),ggbest(2),ggbest(3),ggbest(4))
+
+\end{lstlisting}
+\begin{lstlisting}[style=Matlab-editor]
+function [a,b,c,va,vb,vc]=rndgen()
+
+a=10*rand();
+va=10*rand();
+b=-10+(10+10)*rand();
+vb=-10+(10+10)*rand();
+c=10*rand();
+vc=10*rand();
+
+end
+\end{lstlisting}
+
+\begin{lstlisting}[style=Matlab-editor]
+PSO has found the following parameters to be the best:
+
+   a: 0.924817
+   b: 1.009375
+   c: 5.328718
+ LSE: 290.313288
+\end{lstlisting}
+
+\subsection*{L. Plot Graphic}
+\begin{align*}
+    \includegraphics [width=4.6in]{Proj2_01.eps}
+\end{align*}
+
+\end{document}

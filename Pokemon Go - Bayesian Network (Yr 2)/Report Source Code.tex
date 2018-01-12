@@ -1,0 +1,657 @@
+
+% This LaTeX was auto-generated from MATLAB code.
+% To make changes, update the MATLAB code and republish this document.
+
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{exsheets,hyperref}
+\usepackage{amssymb,amsmath,amsopn}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage[a4paper, total={6in,9in}]{geometry}
+\usepackage{listings}
+\usepackage[T1]{fontenc} % recommended for languages with accents
+\usepackage[utf8]{inputenc}
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+
+\sloppy
+\definecolor{lightgray}{gray}{0.5}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style}, 
+    basicstyle=\ttfamily,
+}
+\section*{Bayesian Network for Project 1}
+\section*{Contents}
+\begin{itemize}
+\setlength{\itemsep}{-1ex}
+   \item Summary
+   \item Data Processing
+   \item Data Exploration
+   \item Network Structure
+   \item Probability Tables
+   \item Research Questions
+   \item Appendix
+\end{itemize}
+
+\subsection*{Summary}
+\begin{par}
+Through the data collected by students playing Pok\'{e}mon GO, we aim to draw relations between the various variables ranging from the players' level and the Pok\'{e}mon CP they would most likely be able to obtain. Using a Bayesian network is a tool, we could effectively answer questions that many might ask. For example, in our second research question we have found that it is easier to catch Pok\'{e}mon in the daytime.
+\end{par}
+\subsection*{Data Processing}
+\begin{par}
+Given a raw data set, we used Microsoft Excel to manually eliminated invalid entries by assessing and considering what was realistic and what was not possible (void data). Subsequently, the first letter of every word was edited to uppercase to ensure consistency. Following that, we used the "Convert text to columns wizard" to separate Pokemon types for those which had 2 types. Lastly, we rounded off the "waiting time" column to the nearest integer for better calculation. After which, we used the function \texttt{\color{blue} textscan} and \texttt{\color{blue} table} function to import the data into $MATLAB$.
+\end{par}
+\break
+\begin{verbatim}
+disp(consolidatedtable(7:13,:));
+\end{verbatim}
+\includegraphics[width=6in]{sampleoutput.PNG}
+
+\subsection*{Data Exploration}
+\begin{par}
+Using the extracted data, we have found that the player levels were spread mainly between the 0 and 25 range. We have created a function \texttt{hist(playerLvl)} and \texttt{hist(CP)} to plot the frequency for player level and Pok\'{e}mon CP in 2 separate histograms. The code for the function can be found within the appendix.
+\end{par}\newpage
+\begin{par}
+Player level and Pok\'{e}mon are distributed according to their respective histograms:
+\end{par}
+\begin{verbatim}
+hist(playerLvl);
+hist(pokeCP);
+\end{verbatim}
+\begin{center}
+\includegraphics[width=2.8in]{pokemongoproj_02.eps}
+\includegraphics[width=2.8in]{pokemongoproj_03.eps}
+\end{center}
+\begin{par}
+We also assigned each random variable with a True/False indicator. For the following example, the indicator is true using the following assumptions: 
+\end{par}
+\begin{itemize}
+\setlength\itemsep{0.1em}
+\item
+Razz: When Razz Berry was used
+\item
+Location: When the Pok\'{e}mon was caught in water
+\item
+Time: The Pok\'{e}mon was caught during daytime
+\item
+Level: Within the range 1$\sim$10
+\item
+Waiting Time: Between 0$\sim$5min
+\item
+Type: Pok\'{e}mon type is grass
+\item
+CP: Pok\'{e}mon CP is  100$\sim$400
+\item
+Pokeball: A Pok\'{e}mon was caught within the use of 1$\sim$3 Pok\'{e}balls.
+\end{itemize}
+
+\begin{par}
+Here are some simple examples on computing probabilities.
+\end{par}
+\begin{enumerate}
+\begin{par}
+\item
+Given that the player level is $>10$, the probability that the CP for the Pok\'{e}mon caught is $<100$ or $>400$ is 
+\end{par}
+    \begin{equation*} \label{eq1}
+    \begin{split}
+    P(CP'|Level') & = 1 - P(CP|Level') \\
+                  & = 1 - \frac{138}{266} \\
+                  & = 0.481
+    \end{split}
+    \end{equation*}
+    $\therefore$ The probability is calculated to be approximately half. 
+    
+    \begin{par}
+    \item
+    The joint probability that Razz Berry was used and player level is between 1 and 10 is
+    \end{par}
+    
+    \begin{equation*} \label{eq1}
+    \begin{split}
+    P(Razz,Level) & = P(Razz) * P(Level)\\
+                    & = (1-0.838)*0.376\\
+                    & = 0.0609
+    \end{split}
+    \end{equation*}
+    $\therefore$ The probability is close to zero.
+\end{enumerate}
+\newpage
+\subsection*{Network structure}
+\begin{par}
+We constructed a \texttt{graph} function using the \texttt{\color{blue} plot(digraph())} function in the latest version of $MATLAB$ to construct the following Bayesian Network. The network was based on our understanding and drawing of perceived relations between each of the nodes. This results in directed arrows linking the various nodes together. The code for the function \texttt{graph()} can be found within the appendix.
+\end{par}
+
+\begin{verbatim}
+graph1();
+\end{verbatim}
+\begin{center}
+\includegraphics [width=6in]{pokemongoproj_01.eps}
+\end{center}
+\subsection*{Probability Tables}
+\begin{par}
+For storing of the probability tables, we divide the table into 2 columns, $"True"$ and $"False"$. For the condition $"True"$, we calculate the frequency by using a \texttt{for} loop to comb through the entire table and finding the data that satisfies the condition, then divide by the total amount of data (rows). The probability for $"False"$ can be calculated by the formula $P(True) = 1 - P(False)$. The code to calculate the probability tables for \textit{Player Level} and \textit{Pok\'{e}balls} are attached in the appendix.
+\end{par}\vspace{1em}
+\begin{par}
+Using this method, we implemented multiple \texttt{for} loops to calculate the probability for each condition for every single node. As a result, we will have probability tables for each node that is featured in the directed graph.
+\end{par}\vspace{1em}
+\begin{par}
+To store the probability tables for each of the eight nodes (as per our Bayesian network), we save each table in a separate matrix and store these matrices into separate files (.mat) outside of $MATLAB$.
+\end{par}
+\newpage
+\subsection*{Research Questions}
+\subsection*{Q1.}
+
+\begin{par}
+Find the joint probability of using Razz berry and Waiting Time being less than or equal to 3 minutes.
+\end{par} \vspace{1em}
+\begin{par}
+We apply BNT(Bayesian Networks Toolbox) and found $P(Razz=true,WaitT=true)$ to be 0.0871.
+We may also compute the probability by hand:
+\end{par} 
+
+\begin{equation*} 
+\begin{split}
+P(Razz,WaitT) & = P(Razz,WaitT|Razz,Loca)*P(Razz,Loca) + \\                          &    P(Razz,WaitT|Razz,Loca')*P(Razz,Loca') + \\                       &    P(Razz,WaitT|Razz',Loca)*P(Razz',Loca) + \\                       &    P(Razz,WaitT|Razz',Loca')*P(Razz',Loca')  \\
+              & = P(WaitT|Razz,Loca)*P(Razz)*P(Loca) + \\
+              &  P(WaitT|Razz,Loca')*P(Razz)*P(Loca') \\
+              & = 0.5 * (1-0.838) * 0.0211 + \frac{35}{65} * (1-0.838)*(1-0.0211)\\
+              & = 0.871
+\end{split}
+\end{equation*}
+
+The result is the same as when using BNT.
+
+
+\subsection*{Q2.}
+
+\begin{par}
+Are 'Grass' type Pok\'{e}mon easier to catch in the daytime?
+\end{par}\vspace{1em}
+\begin{par}
+We apply BNT(Bayesian Networks Toolbox) and find that $P(Time=true\mid Type=true)$ to be 0.764. We may also compute the probability by hand:
+\end{par} 
+\begin{equation} \label{eq1}
+\begin{split}
+P(Time,Type) & =  P(Type|Time,Loca) * P(Time) * P(Loca) +\\
+            &    P(Type|Time,Loca') * P(Time) * P(Loca') \\
+            & = 0 + \frac{13}{340} * 0.815 * (1 - 0.0211) \\
+            & = 0.0305
+\end{split}
+\end{equation}
+
+\begin{equation} \label{eq1}
+\begin{split}
+P(Type) & =  P(Type|Time,Loca) * P(Time) * P(Loca) +\\
+            &    P(Type|Time,Loca') * P(Time) * P(Loca') +\\
+            &    P(Type|Time',Loca) * P(Time') * P(Loca) +\\
+            &    P(Type|Time',Loca') * P(Time') * P(Loca')\\
+            & =  0 + 0 + \frac{13}{340} * 0.815 * (1 - 0.0211) + \frac{4}{77} * (1 - 0.815) * (1 - 0.0211) \\
+            & = 0.0399
+\end{split}
+\end{equation}
+
+\begin{equation*} \label{eq1}
+\begin{split}
+P(Time|Type) & = \frac{P(Time,Type)}{P(Type)} \\
+            & = \frac{0.0305}{0.0399}\\
+            & = 0.764
+\end{split}
+\end{equation*}
+\begin{par}
+Noticed that the result is the same as when using BNT.
+\end{par}\vspace{1em}
+\begin{par}
+Since 0.764 (Daytime) is larger than $1 - 0.764$ (Nighttime),
+grass type Pok\'{e}mon are caught more easily in the day than at night.
+\end{par}
+
+    
+
+\subsection*{Q3.}
+
+\begin{par}
+Given player level to be above 10, and  the Pok\'{e}mon was caught using less than 3 pok\'{e}balls, what is the probablity that the pok\'{e}mon CP is between 100 and 400?
+\end{par}
+\vspace{1em}
+\begin{par}
+Apply BNT(Bayesian Networks Toolbox) and find P(CP=True\ensuremath{|}Pokeball=True,Level=False) to be 0.5616.
+This probability is quite hard to calculate by hand, since its answer will depend on all nodes.\\
+However, the idea is similar to Q1 and Q2, so we will truncate the calculation of the formula. 
+
+\begin{equation*} \label{eq1}
+\begin{split}
+P(CP|Pokeball,Level) & = \frac{P(CP,Pokeball,Level)}{P(Pokeball,Level)} \\
+\end{split}
+\end{equation*}
+
+\begin{equation*} \label{eq1}
+\begin{split}
+P(CP,Pokeball,Level) & = P(CP,Pokeball,Level|WaitT,Type,CP,Level)*P(WaitT,Type,CP,Level)+ \\
+&  P(CP,Pokeball,Level|WaitT',Type,CP,Level)*P(WaitT',Type,CP,Level)+ \\
+&  P(CP,Pokeball,Level|WaitT,Type',CP,Level)*P(WaitT,Type',CP,Level)+ \\
+&  P(CP,Pokeball,Level|WaitT,Type,CP',Level)*P(WaitT,Type,CP',Level)+ \\
+&  P(CP,Pokeball,Level|WaitT,Type,CP,Level')*P(WaitT,Type,CP,Level')+ \\
+&  P(CP,Pokeball,Level|WaitT',Type',CP,Level)*P(WaitT',Type',CP,Level)+ \\
+&  P(CP,Pokeball,Level|WaitT',Type,CP',Level')*P(WaitT',Type,CP',Level)+ \\
+&  P(CP,Pokeball,Level|WaitT',Type,CP,Level')*P(WaitT',Type,CP,Level')+ \\
+&  P(CP,Pokeball,Level|WaitT,Type',CP',Level)*P(WaitT,Type',CP',Level)+ \\
+&  P(CP,Pokeball,Level|WaitT,Type',CP,Level')*P(WaitT,Type',CP,Level')+ \\
+&  P(CP,Pokeball,Level|WaitT,Type,CP',Level')*P(WaitT,Type,CP',Level')+ \\
+&  P(CP,Pokeball,Level|WaitT',Type',CP',Level)*P(WaitT',Type',CP',Level)+ \\
+&  P(CP,Pokeball,Level|WaitT',Type',CP,Level')*P(WaitT',Type',CP,Level')+ \\
+&  P(CP,Pokeball,Level|WaitT',Type,CP',Level')*P(WaitT',Type,CP',Level')+ \\
+&  P(CP,Pokeball,Level|WaitT,Type',CP',Level')*P(WaitT,Type',CP',Level')+ \\
+&  P(CP,Pokeball,Level|WaitT',Type',CP',Level')*P(WaitT',Type',CP',Level')+ \\
+&  ...\\
+P(Pokeball,Level) &= ... $ calculation is similar$
+\end{split}
+\end{equation*}
+
+\end{par} 
+
+
+\newpage
+\section*{Appendix}
+\begin{par}
+We will list our code for the functions mentioned in the report over here in the appendix for easier reference.
+\end{par}
+\subsection*{Contents}
+\begin{itemize}
+\setlength\itemsep{0.1em}
+   \item Code to import filtered CSV data into MATLAB
+   \item Code to print Bayesian Network
+   \item Code to print $Player Level$ histogram
+   \item Code to print $Pok\acute{e}mon$ CP histogram
+   \item Code to print probability table for $Player Level$
+   \item Code to print probability table for $Pok\acute{e}balls$ used
+   \item Code to setup Bayesian Network for BNT
+   \item Code to setup Q1
+   \item Code to setup Q2
+   \item Code to setup Q3
+   \item Miscellaneous Data
+\end{itemize}
+\subsection*{Code to import filtered CSV data into $MATLAB$}
+\begin{lstlisting}
+function [timeStamp,pokeName,pokeType1,pokeType2,pokeCP,playerLvl,playerTeam,waitingTime,pokeLoc,weather,tofDay,lure,pokeStops,pokeBalls,razzBerry]=import();
+input = textscan(fopen('Pokemon.csv'),'%s %s %s %s %f %f %s %f %s %s %s %s %f %f %s','Headerlines',1,'Delimiter',',');
+timeStamp = input{1,1};
+pokeName = input{1,2};
+pokeType1 = input{1,3};
+pokeType2 = input{1,4};
+pokeCP = input{1,5};
+playerLvl = input{1,6};
+playerTeam = input{1,7};
+waitingTime = input{1,8};
+pokeLoc = input{1,9};
+weather = input{1,10};
+tofDay = input{1,11};
+lure = input{1,12};
+pokeStops = input{1,13};
+pokeBalls = input{1,14};
+razzBerry = input{1,15};
+end
+\end{lstlisting}\vspace{1em}
+\newpage
+\subsection*{Code to print Bayesian Network}
+\begin{lstlisting}
+function graph1()
+s=[1 1 2 3 4 5 6 7];
+t=[2 5 8 2 5 8 7 8];
+u={'Location' 'Waiting Time' 'Razz Berry' 'Time of Day' 'Type' 'Level' 'CP' 'Pokeball'};
+G = digraph(s,t);
+plot(G,'NodeLabel',u);
+axis off;
+end
+\end{lstlisting}\vspace{1em}
+\subsection*{Code to print $Player Level$ histogram}
+\begin{lstlisting}
+function hist(data)
+figure(2);
+histogram(data);
+title('Player Level Frequency');
+xlabel('Player Level');
+ylabel('Frequency');
+end
+\end{lstlisting}\vspace{1em}
+
+\subsection*{Code to print $Pok\acute{e}mon$ CP histogram}
+\begin{lstlisting}
+function hist(data)
+figure(3);
+histogram(data);
+title('CP Frequency');
+xlabel('CP Level');
+ylabel('Frequency');
+end
+\end{lstlisting}\vspace{1em}
+
+\subsection*{Code to print probability table for $Player Level$}
+\begin{lstlisting}
+playerLvltab=zeros(max(playerLvl),2);
+for i=1:max(playerLvl) 
+    for j=1:size(consolidatedtable,1)
+        if playerLvl(j)==i;
+            playerLvltab(i,1)=playerLvltab(i,1)+1;
+        end 
+    end
+    playerLvltab(i,1)=playerLvltab(i,1)/size(playerLvl,1);
+    playerLvltab(i,2)=1-playerLvltab(i,1);
+end
+v=[1:max(playerLvl)]';
+probtableplayerLvl = table(v,playerLvltab(:,1),playerLvltab(:,2),...
+    'VariableNames',{'PlayerLevel','True','False'});
+disp(probtableplayerLvl);
+\end{lstlisting}\vspace{1em}
+\newpage
+\color{lightgray} \begin{verbatim} 
+    PlayerLevel      True        False 
+    ___________    _________    _______
+
+     1              0.011737    0.98826
+     2              0.058685    0.94131
+     3              0.032864    0.96714
+     4              0.053991    0.94601
+     5              0.051643    0.94836
+     6              0.032864    0.96714
+     7              0.021127    0.97887
+     8              0.058685    0.94131
+     9             0.0070423    0.99296
+    10              0.046948    0.95305
+    11             0.0093897    0.99061
+    12              0.032864    0.96714
+    13              0.065728    0.93427
+    14             0.0070423    0.99296
+    15              0.035211    0.96479
+    16              0.077465    0.92254
+    17              0.042254    0.95775
+    18              0.011737    0.98826
+    19             0.0070423    0.99296
+    20               0.07277    0.92723
+    21              0.075117    0.92488
+    22              0.058685    0.94131
+    23              0.077465    0.92254
+    24              0.028169    0.97183
+    25              0.011737    0.98826
+    26             0.0023474    0.99765
+    27                     0          1
+    28                     0          1
+    29                     0          1
+    30                     0          1
+    31             0.0093897    0.99061
+\end{verbatim} \color{black}
+\newpage
+\subsection*{Code to print probability table for $Pok\acute{e}balls$ used}
+\begin{lstlisting}
+pokeBallstab=zeros(max(pokeBalls),2);
+for i=1:max(pokeBalls) 
+    for j=1:size(consolidatedtable,1)
+        if pokeBalls(j)==i;
+            pokeBallstab(i,1)=pokeBallstab(i,1)+1;
+        end 
+    end
+    pokeBallstab(i,1)=pokeBallstab(i,1)/size(pokeBalls,1);
+    pokeBallstab(i,2)=1-pokeBallstab(i,1);
+end
+v=[1:max(pokeBalls)]';
+probtablepokeBallstab = table(v,pokeBallstab(:,1),pokeBallstab(:,2),...
+    'VariableNames',{'Pokeballs','True','False'});
+disp(probtablepokeBallstab);
+\end{lstlisting}
+\vspace{1em}
+\newpage
+\color{lightgray}\begin{verbatim}
+    Pokeballs      True        False 
+    _________    _________    _______
+
+     1             0.48826    0.51174
+     2               0.223      0.777
+     3            0.093897     0.9061
+     4            0.042254    0.95775
+     5            0.035211    0.96479
+     6            0.035211    0.96479
+     7            0.018779    0.98122
+     8            0.016432    0.98357
+     9           0.0023474    0.99765
+    10           0.0046948    0.99531
+    11           0.0046948    0.99531
+    12           0.0070423    0.99296
+    13           0.0046948    0.99531
+    14           0.0070423    0.99296
+    15                   0          1
+    16                   0          1
+    17           0.0070423    0.99296
+    18                   0          1
+    19                   0          1
+    20           0.0023474    0.99765
+    21                   0          1
+    22                   0          1
+    23                   0          1
+    24                   0          1
+    25                   0          1
+    26                   0          1
+    27           0.0023474    0.99765
+    28                   0          1
+    29                   0          1
+    30                   0          1
+    31                   0          1
+    32                   0          1
+    33                   0          1
+    34                   0          1
+    35                   0          1
+    36                   0          1
+    37                   0          1
+    38                   0          1
+    39                   0          1
+    40                   0          1
+    41                   0          1
+    42                   0          1
+    43                   0          1
+    44                   0          1
+    45                   0          1
+    46                   0          1
+    47                   0          1
+    48                   0          1
+    49                   0          1
+    50           0.0023474    0.99765
+    51                   0          1
+    52                   0          1
+    53                   0          1
+    54                   0          1
+    55                   0          1
+    56                   0          1
+    57                   0          1
+    58                   0          1
+    59                   0          1
+    60           0.0023474    0.99765
+
+\end{verbatim} \color{black}
+    
+
+
+% This LaTeX was auto-generated from an M-file by MATLAB.
+% To make changes, update the M-file and republish this document.
+
+
+\newpage
+\subsection*{Code to setup Bayesian Network for BNT}
+
+\begin{lstlisting}
+N=8;
+dag=zeros(N,N);
+Razz=1;Loca=2;Time=3;Level=4;WaitT=5;Type=6;CP=7;Pokeball=8;
+dag([Razz Loca],WaitT)=1;
+dag([Loca Time],Type)=1;
+dag(Level,CP)=1;
+dag([WaitT Type CP],Pokeball)=1;
+discrete_nodes=1:N;
+node_sizes=2*ones(1,N);
+bnet=mk_bnet(dag,node_sizes,'names',{'Razz','Loca','Time','Level',...
+    'WaitT','Type','CP','Pokeball'},'discrete',discrete_nodes);
+\end{lstlisting}\vspace{1em}
+\begin{par}
+We assume the following conditions to simplify our calculation:
+\end{par} \vspace{1em}
+\begin{itemize}
+\setlength\itemsep{0.1em}
+\item Razz$=$True : Razz Berry was used
+\item Loca$=$True : Pok\'{e}mon was caught in water
+\item Time$=$True : Daytime
+\item Level$=$True : 1$\sim$10
+\item WaitT$=$True : 0$\sim$5
+\item Type$=$True : grass
+\item CP$=$True :CP 100$\sim$400
+\item Pok\'{e}ball$=$True : 1$\sim$3
+\end{itemize}
+\vspace{1em}
+\begin{par}
+Then we assign all conditional probabilities with its respective values:
+\end{par} 
+\vspace{1em}
+\begin{lstlisting}
+bnet.CPD{Razz}=tabular_CPD(bnet,Razz,[0.838,1-0.838]);
+bnet.CPD{Loca}=tabular_CPD(bnet,Loca,[1-0.0211,0.0211]);
+bnet.CPD{Time}=tabular_CPD(bnet,Time,[1-0.815,0.815]);
+bnet.CPD{Level}=tabular_CPD(bnet,Level,[1-0.376,0.376]);
+bnet.CPD{WaitT}=tabular_CPD(bnet,WaitT,[1-290/365,1-35/65,1/5,0.5,290/365,...
+    35/65,4/5,0.5]);
+bnet.CPD{Type}=tabular_CPD(bnet,Type,[1-4/77,1,1-13/340,1,4/77,0,13/340,0]);
+bnet.CPD{CP}=tabular_CPD(bnet,CP,[1-138/266,1-26/160,138/266,26/160]);
+bnet.CPD{Pokeball}=tabular_CPD(bnet,Pokeball,[1-25/55,1-167/195,1-1/4,...
+    1-6/8,1-21/28,1-120/125,1-2/3,1-1/2,25/55,167/195,1/4,6/8,21/28,...
+    120/125,2/3,1/2]);
+draw_graph(dag,{'Razz Berry','Location','Time of Day','Level',...
+    'Waiting Time','Type','CP','Pokeball'});
+\end{lstlisting}
+
+\newpage
+\subsection*{Q1.}
+
+\begin{par}
+Find the joint probability of using Razz Berry and Waiting Time to be less than or equal to 3 minutes.
+\end{par} \vspace{1em}
+\begin{par}
+The following lines of code compute $P(Razz=true,WaitT=true)$ in BNT:
+\end{par} \vspace{1em}
+\begin{lstlisting}
+engine=jtree_inf_engine(bnet);
+evidence=cell(1,N);
+[engine,loglik]=enter_evidence(engine,evidence);
+marg=marginal_nodes(engine,[Razz WaitT]);
+marg.T(2,2)
+\end{lstlisting}
+
+        \color{lightgray} \begin{verbatim}
+ans =
+
+    0.0871
+
+\end{verbatim} \color{black}
+    
+
+\subsection*{Q2.}
+
+\begin{par}
+Are Pok\'{e}mon with type 'Grass' easier caught in the daytime?
+\end{par} \vspace{1em}
+\begin{lstlisting}
+engine=jtree_inf_engine(bnet);
+evidence=cell(1,N);
+evidence{Type}=2; % Noted here 1=False 2=True
+[engine,loglik]=enter_evidence(engine,evidence);
+marg=marginal_nodes(engine,Time);
+marg.T()
+fprintf('Since %f larger than %f\n',marg.T(2),marg.T(1));
+fprintf('Then grass type is easier to caught in day than in night.\n');
+\end{lstlisting}
+
+        \color{lightgray} \begin{verbatim}
+ans =
+
+    0.2357
+    0.7643
+
+Since 0.764290 is larger than 0.235710
+Grass type Pokémon are easier to catch in the day than at night.
+\end{verbatim} \color{black}
+    
+\newpage
+\subsection*{Q3.}
+
+\begin{par}
+Given a player level to be above 10, and the Pok\'{e}mon was caught using less than 3 Pok\'{e}balls. What is the probablity that Pok\'{e}mon CP is between 100 and 400?
+\end{par} \vspace{1em}
+\begin{par}
+The following codes compute $P(CP=True\mid Pokeball=True,Level=False)$.
+\end{par} \vspace{1em}
+\begin{lstlisting}
+engine=jtree_inf_engine(bnet);
+evidence=cell(1,N);
+evidence{Level}=1;
+evidence{Pokeball}=2;
+[engine,loglik]=enter_evidence(engine,evidence);
+marg=marginal_nodes(engine,CP);
+marg.T(2)
+\end{lstlisting}
+
+        \color{lightgray} \begin{verbatim}
+ans =
+
+    0.5616
+
+\end{verbatim} \color{black}
+    
+\newpage
+\subsection*{Miscellaneous Data}
+
+\begin{itemize}
+\setlength\itemsep{0.1em}
+\item P(Razz) $=1-0.838$
+\item P(Loca) $=0.0211$
+\item P(Time) $=0.815$
+\item P(Level) $=0.376$
+\item P(WaitT $\mid$ Razz,Loca) $=0.5$
+\item P(WaitT $\mid$ Razz',Loca) $=\frac{4}{5}$
+\item P(WaitT $\mid$ Razz,Loca') $=\frac{35}{65}$
+\item P(WaitT $\mid$ Razz',Loca') $=\frac{290}{365}$
+\item P(Type $\mid$ Loca,Time) $=0$
+\item P(Type $\mid$ Loca', Time) $=\frac{13}{340}$
+\item P(Type $\mid$ Loca,Time') $=0$
+\item P(Type $\mid$ Loca',Time') $=\frac{4}{77}$
+\item P(CP $\mid$ Level) $=\frac{26}{160}$
+\item P(CP $\mid$ Level') $=\frac{138}{266}$
+\item P(Pokeball $\mid$ type,CP) $=\frac{3}{5}$
+\item P(Pokeball $\mid$ type,CP') $=\frac{7}{14}$
+\item P(Pokeball $\mid$ type',CP) $=\frac{141}{155}$
+\item P(Pokeball $\mid$ type',CP') $=\frac{192}{268}$
+\item P(Pokeball $\mid$ CP,type,WaitT) $=\frac{1}{2}$
+\item P(Pokeball $\mid$ CP,type,WaitT') $=\frac{2}{3}$
+\item P(Pokeball $\mid$ CP,type',WaitT) $=\frac{120}{125}$
+\item P(Pokeball $\mid$ CP,type',WaitT') $=\frac{21}{28}$
+\item P(Pokeball $\mid$ CP',type,WaitT) $=\frac{6}{8}$
+\item P(Pokeball $\mid$ CP',type,WaitT') $=\frac{1}{4}$
+\item P(Pokeball $\mid$ CP',type',WaitT) $=\frac{167}{195}$
+\item P(Pokeball $\mid$ CP',type',WaitT') $=\frac{25}{55}$
+\end{itemize} \vspace{1em}
+
+\end{document}
+    

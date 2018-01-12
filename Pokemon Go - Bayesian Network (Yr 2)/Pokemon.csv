@@ -1,0 +1,427 @@
+Timestamp,Who did you just catch?,Type,Type2,Combat Power of the Pokemon,Your level,Your team,Time in minutes you've waited for the wild Pokemon to appear.,Where did you catch the Pokemon?,What is the weather?,Is it day or night?,Are you under influence of lure module / incense?,How many Pokestops are there within 3 minutes of walking?,How many Pokeballs did you spend to catch the Pokemon?,Did you use a Razz Berry?
+9/9/2016 10:16,Ekans,Poison,,365,16,Mystic (blue),1,school,Clear sky,day,no,12,3,yes
+9/9/2016 12:01,Pidgey,Flying, Normal,178,16,Mystic (blue),1,school,Clear sky,day,no,10,1,no
+9/9/2016 12:06,Rattata,Normal,,157,16,Mystic (blue),5,school,Clear sky,day,no,8,2,no
+9/9/2016 14:59,Rattata,Normal,,39,5,haven't chosen yet,1,library,Cloudy,day,no,2,1,no
+9/9/2016 15:01,Poliwag,Water,,10,5,haven't chosen yet,2,library,Cloudy,day,no,1,2,no
+9/9/2016 15:11,Jigglypuff,Fairy, Normal,37,5,haven't chosen yet,3,library,Cloudy,day,no,4,2,no
+9/9/2016 17:03,Rattata,Normal,,210,15,Mystic (blue),1,school,Rain,day,yes,7,1,no
+9/9/2016 17:06,Eevee,Normal,,135,16,Mystic (blue),3,school,Rain,day,yes,7,3,yes
+9/9/2016 17:08,Venonat,Bug, Poison,98,16,Mystic (blue),3,school,Rain,day,yes,7,3,no
+9/9/2016 18:04,Pidgey,Flying, Normal,112,16,Mystic (blue),3,school,Cloudy,day,no,7,4,no
+9/9/2016 18:06,Rattata,Normal,,114,16,Mystic (blue),0,school,Rain,day,no,7,1,no
+9/9/2016 18:12,Rattata,Normal,,82,16,Mystic (blue),6,school,Cloudy,day,no,12,1,no
+9/9/2016 20:17,Horsea,Water,,171,20,Mystic (blue),5,forest (around NTU),Cloudy,night,no,2,1,no
+9/9/2016 20:19,Dratini,Dragon,,440,20,Mystic (blue),2,water body (Nanyang Lake),Clear sky,day,no,3,5,yes
+9/9/2016 20:22,Gastly,Ghost, Poison,191,16,Mystic (blue),5,school,Cloudy,night,no,7,2,yes
+9/9/2016 20:44,Rattata,Normal,,10,8,Valor (red),1,school,Clear sky,day,no,6,2,no
+9/9/2016 20:55,Snorlax ,Normal,,1100,25,Valor (red),8,student hall,Cloudy,night,no,0,27,yes
+9/10/2016 10:47,Rattata,Normal,,213,24,Valor (red),1,school,Clear sky,day,yes,2,2,no
+9/10/2016 14:25,Magikarp,Water,,10,2,haven't chosen yet,2,water body (Nanyang Lake),Clear sky,day,no,3,1,no
+9/10/2016 22:06,Golbat,Flying, Poison,201,10,Mystic (blue),5,school,Cloudy,night,no,3,4,yes
+9/11/2016 10:30,Rattata,Normal,,105,10,haven't chosen yet,5,school,Clear sky,day,no,7,2,no
+9/12/2016 11:13,Spearow,Flying, Normal,193,24,Mystic (blue),5,student hall,Clear sky,day,no,3,1,no
+9/12/2016 11:14,Raticate,Normal,,410,24,Mystic (blue),1,school,Clear sky,day,no,7,3,no
+9/12/2016 11:28,Spearow,Flying, Normal,402,24,Mystic (blue),0,school,Clear sky,day,no,9,1,no
+9/12/2016 11:40,Pidgey,Flying, Normal,373,24,Mystic (blue),7,school,Clear sky,day,no,7,1,no
+9/12/2016 12:43,Weedle,Bug, Poison,74,24,Mystic (blue),0,school,Clear sky,day,no,5,1,no
+9/12/2016 13:24,Venonat,Bug, Poison,156,22,Mystic (blue),1,school,Cloudy,day,no,3,1,no
+9/12/2016 13:25,Psyduck,Water,,613,22,Mystic (blue),2,school,Clear sky,day,yes,3,1,no
+9/12/2016 13:26,Slowpoke,Psychic, Water,444,22,Mystic (blue),2,student hall,Clear sky,day,no,2,1,no
+9/12/2016 13:27,Poliwag,Water,,299,22,Mystic (blue),1,school,Clear sky,day,no,3,1,yes
+9/12/2016 13:28,Zubat,Flying, Poison,181,22,Mystic (blue),1,school,Clear sky,day,no,3,1,no
+9/12/2016 13:29,Magikarp,Water,,127,22,Mystic (blue),1,water body (Nanyang Lake),Clear sky,day,no,1,1,no
+9/12/2016 13:29,Magikarp,Water,,142,22,Mystic (blue),1,water body (Nanyang Lake),Clear sky,day,no,1,1,yes
+9/12/2016 13:30,Magikarp,Water,,82,22,Mystic (blue),1,water body (Nanyang Lake),Clear sky,day,no,1,1,no
+9/12/2016 13:31,Eevee,Normal,,508,22,Mystic (blue),5,school,Clear sky,day,no,2,2,yes
+9/12/2016 13:32,Pikachu,Electric,,436,22,Mystic (blue),10,canteen,Clear sky,day,yes,3,1,yes
+9/12/2016 13:33,Oddish,Grass, Poison,520,22,Mystic (blue),3,school,Clear sky,day,no,3,2,no
+9/12/2016 13:34,Doduo,Flying, Normal,373,22,Mystic (blue),4,school,Clear sky,day,yes,3,1,no
+9/12/2016 13:47,Krabby,Water,,218,23,Mystic (blue),3,school,Cloudy,day,no,0,1,no
+9/12/2016 13:48,Eevee,Normal,,134,15,Valor (red),9,canteen,Cloudy,day,no,3,1,no
+9/12/2016 16:28,Rattata,Normal,,92,20,Instinct (yellow),0,school,Clear sky,day,no,6,1,no
+9/12/2016 16:38,Dragonite,Dragon,,2158,25,Mystic (blue),10,student hall,Rain,night,no,2,4,yes
+9/12/2016 17:21,Zubat,Flying, Poison,393,24,Mystic (blue),1,library,Clear sky,day,no,4,2,no
+9/12/2016 18:24,Pidgey,Flying, Normal,356,24,Mystic (blue),1,library,Clear sky,night,no,6,2,no
+9/12/2016 20:16,Caterpie,Bug,,113,24,Mystic (blue),3,canteen,Clear sky,night,no,0,1,no
+9/12/2016 20:17,Weedle,Bug, Poison,192,24,Mystic (blue),7,school,Clear sky,night,no,4,1,no
+9/13/2016 10:07,Venonat,Bug, Poison,13,8,Valor (red),0,school,Clear sky,day,no,7,1,no
+9/13/2016 10:11,Kakuna,Bug, Poison,26,8,Valor (red),5,school,Clear sky,day,no,7,2,no
+9/13/2016 10:16,Rattata,Normal,,49,8,Valor (red),4,school,Clear sky,day,no,7,3,no
+9/13/2016 14:12,Ekans,Poison,,10,5,Instinct (yellow),0,school,Clear sky,day,no,4,1,no
+9/13/2016 15:35,Pikachu,Electric,,306,23,Valor (red),2,school,Clear sky,day,no,3,1,yes
+9/13/2016 15:39,Abra,Psychic,,56,20,Mystic (blue),3,school,Cloudy,day,no,3,4,yes
+9/13/2016 16:42,Eevee,Normal,,689,23,Valor (red),4,library,Clear sky,day,yes,3,2,yes
+9/13/2016 17:29,Tentacruel,Water,,273,5,Instinct (yellow),0,student hall,Clear sky,night,no,0,1,no
+9/13/2016 19:01,Rattata,Normal,,145,23,Valor (red),0,school,Clear sky,day,no,4,1,no
+9/13/2016 19:01,Pidgey,Flying, Normal,372,23,Valor (red),0,school,Clear sky,day,no,4,1,no
+9/13/2016 19:40,Rattata,Normal,,214,13,Mystic (blue),5,school,Clear sky,night,yes,5,1,no
+9/14/2016 10:30,Dratini,Dragon,,237,23,Valor (red),2,school,Clear sky,day,no,1,1,no
+9/14/2016 12:48,Weedle,Bug, Poison,67,19,Valor (red),0,student hall,Clear sky,day,no,6,1,no
+9/14/2016 12:49,Weedle,Bug, Poison,167,19,Valor (red),5,school,Clear sky,day,no,9,3,no
+9/14/2016 13:02,Rattata,Normal,,65,15,Mystic (blue),0,school,Clear sky,day,no,10,1,no
+9/14/2016 13:12,Pidgey,Flying, Normal,10,16,Mystic (blue),0,school,Cloudy,day,no,12,1,no
+9/14/2016 13:13,Pidgey,Flying, Normal,73,23,Mystic (blue),0,school,Clear sky,day,no,22,2,no
+9/14/2016 13:17,Rattata,Normal,,24,23,Mystic (blue),0,school,Clear sky,day,no,24,3,no
+9/14/2016 13:18,Weedle,Bug, Poison,222,23,Mystic (blue),0,school,Clear sky,day,no,21,5,no
+9/14/2016 13:19,Rattata,Normal,,34,23,Mystic (blue),0,school,Clear sky,day,no,10,2,no
+9/14/2016 13:19,Pidgey,Flying, Normal,41,23,Mystic (blue),1,student hall,Clear sky,day,no,10,1,no
+9/14/2016 13:20,Pidgey,Flying, Normal,135,23,Mystic (blue),3,student hall,Clear sky,day,no,10,1,no
+9/14/2016 13:21,Spearow,Flying, Normal,155,16,Mystic (blue),7,school,Cloudy,day,no,12,2,no
+9/14/2016 13:21,Pidgey,Flying, Normal,120,23,Mystic (blue),2,student hall,Clear sky,day,no,10,1,no
+9/14/2016 13:22,Pidgey,Flying, Normal,108,16,Mystic (blue),1,school,Cloudy,day,no,12,3,no
+9/14/2016 13:22,Pidgey,Flying, Normal,341,23,Mystic (blue),1,school,Clear sky,day,no,10,6,no
+9/14/2016 13:23,Gastly,Ghost, Poison,52,23,Mystic (blue),4,school,Clear sky,day,no,8,4,no
+9/14/2016 13:24,Nidoran F,Poison,,57,23,Mystic (blue),5,student hall,Clear sky,day,no,5,1,no
+9/14/2016 13:31,Pidgey,Flying, Normal,216,16,Mystic (blue),7,school,Cloudy,day,no,12,1,no
+9/14/2016 13:34,Pidgey,Flying, Normal,110,16,Mystic (blue),2,school,Cloudy,day,yes,12,1,no
+9/14/2016 13:37,Pidgey,Flying, Normal,10,16,Mystic (blue),3,school,Cloudy,day,yes,12,1,no
+9/14/2016 13:42,Rattata,Normal,,156,16,Mystic (blue),3,school,Cloudy,day,yes,12,14,no
+9/14/2016 13:46,Rattata,Normal,,93,16,Mystic (blue),3,school,Cloudy,day,yes,12,1,yes
+9/14/2016 13:50,Rattata,Normal,,10,16,Mystic (blue),3,school,Cloudy,day,yes,12,1,no
+9/14/2016 13:53,Golbat,Flying, Poison,560,16,Mystic (blue),2,school,Cloudy,day,yes,12,5,yes
+9/14/2016 13:57,Raticate,Normal,,457,16,Mystic (blue),3,school,Cloudy,day,yes,12,2,yes
+9/14/2016 13:58,Rattata,Normal,,57,16,Mystic (blue),1,school,Cloudy,day,yes,12,1,no
+9/14/2016 14:04,Pidgey,Flying, Normal,182,16,Mystic (blue),2,school,Cloudy,day,yes,12,2,yes
+9/14/2016 14:24,Spearow,Flying, Normal,243,16,Mystic (blue),0,school,Cloudy,day,no,12,2,yes
+9/14/2016 15:28,Pidgey,Flying, Normal,187,14,Mystic (blue),0,canteen,Cloudy,day,no,1,2,no
+9/14/2016 15:41,Pidgey,Flying, Normal,75,9,haven't chosen yet,10,school,Cloudy,day,no,2,1,no
+9/14/2016 15:58,Pikachu,Electric,,34,15,Instinct (yellow),1,canteen,Clear sky,day,no,2,5,yes
+9/14/2016 16:36,Butterfree ,Bug, Flying,200,20,Mystic (blue),20,park (Yunan Garden),Cloudy,day,no,5,6,yes
+9/14/2016 16:49,Pidgey,Flying, Normal,284,18,Valor (red),1,school,Cloudy,day,no,3,2,no
+9/14/2016 17:06,Rattata,Normal,,312,23,Valor (red),1,school,Clear sky,day,no,3,2,no
+9/14/2016 20:10,Rattata,Normal,,123,8,Valor (red),0,school,Clear sky,day,no,8,1,no
+9/14/2016 20:12,Paras,Bug, Grass,60,8,Valor (red),0,school,Clear sky,day,no,7,2,no
+9/14/2016 20:14,Horsea,Water,,224,21,Mystic (blue),1,school,Clear sky,day,no,2,3,no
+9/14/2016 20:16,Rattata,Normal,,254,21,Mystic (blue),1,school,Clear sky,day,no,2,3,no
+9/14/2016 22:22,Pidgey,Normal,Flying,21,5,Valor (red),5,school,Clear sky,day,no,3,1,no
+9/14/2016 22:38,Rattata,Normal,,141,11,Mystic (blue),3,school,Clear sky,day,yes,3,2,no
+9/15/2016 0:28,Snorlax,Normal,,10,1,haven't chosen yet,0,library,Clear sky,day,no,6,1,no
+9/15/2016 9:29,Pidgey,Normal,Flying,10,8,haven't chosen yet,1,school,Clear sky,day,no,2,1,no
+9/15/2016 9:32,Koffing,Poison,,50,13,Mystic (blue),1,library,Clear sky,day,no,3,1,no
+9/15/2016 9:33,Rattata,Normal,,73,13,Mystic (blue),1,library,Clear sky,day,no,3,1,no
+9/15/2016 9:34,Rattata,Normal,,141,13,Mystic (blue),1,library,Clear sky,day,no,3,1,no
+9/15/2016 9:34,Staryu,Water,,12,16,Mystic (blue),0,school,Clear sky,day,no,12,1,no
+9/15/2016 9:42,Pidgey,Flying, Normal,107,13,Mystic (blue),5,library,Clear sky,day,no,3,1,no
+9/15/2016 10:05,Rattata,Normal,,79,13,Mystic (blue),20,library,Clear sky,day,no,5,2,no
+9/15/2016 10:11,Pidgey,Flying, Normal,246,16,Mystic (blue),0,school,Clear sky,day,no,12,2,no
+9/15/2016 11:34,Pidgey,Flying, Normal,121,13,Mystic (blue),0,library,Clear sky,day,yes,5,1,no
+9/15/2016 11:36,Weedle,Bug, Poison,15,13,Mystic (blue),1,library,Clear sky,day,yes,5,1,no
+9/15/2016 12:12,Caterpie,Bug,,112,16,Mystic (blue),4,school,Cloudy,day,no,12,3,no
+9/15/2016 12:35,Pidgey,Flying, Normal,169,13,Mystic (blue),0,library,Clear sky,day,no,5,3,no
+9/15/2016 12:36,Rattata,Normal,,37,13,Mystic (blue),0,canteen,Clear sky,day,no,4,1,no
+9/15/2016 12:36,Pidgey,Flying, Normal,166,13,Mystic (blue),2,canteen,Clear sky,day,no,4,6,no
+9/15/2016 15:05,Pidgey,Flying, Normal,26,16,Mystic (blue),7,school,Clear sky,day,no,12,1,no
+9/15/2016 17:09,Magikarp,Water,,110,18,Instinct (yellow),1,student hall,Clear sky,day,no,3,1,no
+9/15/2016 19:51,Pidgey,Flying, Normal,120,12,Instinct (yellow),1,student hall,Clear sky,day,no,4,1,yes
+9/15/2016 21:15,Paras,Bug, Grass,296,13,Mystic (blue),0,library,Clear sky,night,no,5,5,no
+9/15/2016 21:16,Rattata,Normal,,10,13,Mystic (blue),0,library,Clear sky,night,no,5,1,no
+9/15/2016 21:59,Pidgey,Flying, Normal,185,23,Valor (red),1,library,Clear sky,night,no,4,1,no
+9/15/2016 22:00,Rattata,Normal,,146,23,Valor (red),2,school,Clear sky,night,no,2,1,no
+9/15/2016 22:02,Rattata,Normal,,313,23,Valor (red),0,school,Clear sky,night,no,2,1,no
+9/15/2016 22:03,Pidgey,Flying, Normal,211,23,Valor (red),3,forest (around NTU),Clear sky,night,no,1,1,no
+9/15/2016 22:04,Rattata,Normal,,66,23,Valor (red),2,school,Clear sky,night,no,2,1,no
+9/15/2016 22:05,Magikarp,Water,,69,23,Valor (red),5,student hall,Clear sky,night,no,1,1,no
+9/15/2016 22:06,Magikarp,Water,,80,23,Valor (red),1,student hall,Clear sky,night,no,1,2,no
+9/15/2016 22:06,Psyduck,Water,,420,23,Valor (red),1,student hall,Clear sky,night,no,1,3,no
+9/15/2016 22:07,Pidgey,Flying, Normal,26,23,Valor (red),1,student hall,Clear sky,night,no,1,1,no
+9/15/2016 22:09,Magikarp,Water,,83,23,Valor (red),1,student hall,Clear sky,night,no,1,1,no
+9/16/2016 10:09,Rattata,Normal,,10,1,haven't chosen yet,1,canteen,Cloudy,day,no,3,2,no
+9/16/2016 10:10,Paras,Bug, Grass,12,1,haven't chosen yet,2,canteen,Cloudy,day,no,3,1,no
+9/16/2016 13:54,Venonat,Bug, Poison,13,2,haven't chosen yet,6,canteen,Cloudy,day,no,3,2,no
+9/16/2016 13:56,Pidgeotto,Flying, Normal,15,2,haven't chosen yet,2,canteen,Rain,day,no,3,2,no
+9/16/2016 13:59,Spearow,Flying, Normal,45,2,haven't chosen yet,6,school,Rain,day,no,3,3,no
+9/16/2016 14:01,Raticate,Normal,,61,2,haven't chosen yet,4,school,Rain,day,no,3,8,no
+9/16/2016 14:03,Zubat,Flying, Poison,10,3,haven't chosen yet,1,school,Rain,day,no,3,3,no
+9/16/2016 14:05,Pidgey,Flying, Normal,10,3,haven't chosen yet,6,school,Rain,day,no,1,1,no
+9/16/2016 14:07,Rattata,Normal,,10,3,haven't chosen yet,2,school,Cloudy,day,yes,2,1,no
+9/16/2016 14:08,Pidgey,Flying, Normal,44,3,haven't chosen yet,2,school,Cloudy,day,no,2,1,no
+9/16/2016 20:59,Rattata,Normal,,12,4,haven't chosen yet,0,canteen,Cloudy,day,no,5,1,no
+9/16/2016 21:00,Venonat,Bug, Poison,21,4,haven't chosen yet,2,canteen,Cloudy,day,no,5,2,no
+9/16/2016 21:01,Paras,Bug, Grass,14,4,haven't chosen yet,6,canteen,Cloudy,day,no,5,1,yes
+9/16/2016 21:02,Pidgeotto,Flying, Normal,16,4,haven't chosen yet,2,school,Rain,day,no,3,2,no
+9/16/2016 21:03,Spearow,Flying, Normal,49,4,haven't chosen yet,7,library,Rain,day,no,3,7,no
+9/16/2016 21:04,Raticate,Normal,,67,4,haven't chosen yet,2,school,Rain,day,no,3,8,no
+9/16/2016 21:05,Zubat,Flying, Poison,12,4,haven't chosen yet,2,school,Rain,day,no,3,3,no
+9/16/2016 21:06,Pidgey,Flying, Normal,10,4,haven't chosen yet,6,school,Rain,day,no,1,1,no
+9/16/2016 21:07,Rattata,Normal,,10,4,haven't chosen yet,2,school,Clear sky,day,yes,2,1,no
+9/16/2016 21:08,Pidgey,Flying, Normal,44,4,haven't chosen yet,3,school,Clear sky,day,yes,2,1,no
+9/16/2016 21:26,Bellsprout,Grass, Poison,80,8,Valor (red),0,school,Clear sky,day,no,7,3,no
+9/16/2016 21:27,Pidgey,Flying, Normal,60,8,Valor (red),0,school,Clear sky,day,no,7,2,no
+9/16/2016 21:29,Pidgey,Flying, Normal,60,8,Valor (red),1,school,Clear sky,day,no,8,1,no
+9/16/2016 21:30,Weedle,Bug, Poison,10,8,Valor (red),0,school,Clear sky,day,no,8,1,no
+9/16/2016 21:31,Rattata,Normal,,37,8,Valor (red),1,school,Clear sky,day,no,8,1,no
+9/16/2016 21:32,Pidgey,Flying, Normal,10,8,Valor (red),2,school,Clear sky,day,no,8,1,no
+9/16/2016 21:34,Eevee,Normal,,137,8,Valor (red),1,school,Clear sky,day,no,8,2,no
+9/16/2016 21:35,Pidgey,Flying, Normal,124,8,Valor (red),1,school,Clear sky,day,no,8,1,no
+9/16/2016 23:06,Bellsprout,Poison,Grass,600,21,Mystic (blue),4,school,Clear sky,day,no,2,4,yes
+9/16/2016 23:07,Meowth,Normal,,386,21,Mystic (blue),2,school,Clear sky,day,no,2,3,yes
+9/17/2016 0:41,Pidgey,Flying, Normal,265,13,Mystic (blue),2,student hall,Rain,day,yes,3,2,no
+9/17/2016 0:43,Zubat,Flying, Poison,215,13,Mystic (blue),3,sports centre,Clear sky,day,yes,4,3,no
+9/17/2016 0:44,Bulbasaur,Grass, Poison,66,13,Mystic (blue),14,canteen,Clear sky,day,no,4,6,no
+9/17/2016 0:46,Weedle,Bug, Poison,123,15,Mystic (blue),2,student hall,Rain,night,yes,3,1,no
+9/17/2016 0:48,Metapod,Bug,,59,13,Mystic (blue),4,canteen,Cloudy,night,no,2,2,no
+9/17/2016 0:49,Kakuna,Bug, Poison,36,12,Mystic (blue),5,canteen,Rain,day,yes,4,6,no
+9/17/2016 0:50,Paras,Bug, Grass,167,13,Mystic (blue),5,student hall,Clear sky,night,no,1,2,no
+9/17/2016 0:51,Psyduck,Water,,304,13,Mystic (blue),2,student hall,Clear sky,night,yes,1,1,no
+9/17/2016 0:52,Poliwag,Water,,100,12,Mystic (blue),3,water body (Nanyang Lake),Cloudy,day,no,1,2,no
+9/17/2016 0:53,Slowbro,Psychic, Water,33,13,Mystic (blue),14,school,Cloudy,day,yes,4,3,yes
+9/17/2016 0:54,Rhyhorn,Ground, Rock,233,13,Mystic (blue),10,student hall,Rain,night,no,1,2,no
+9/17/2016 0:55,Rattata,Normal,,54,13,Mystic (blue),10,student hall,Clear sky,night,no,1,2,no
+9/17/2016 9:51,Meowth,Normal,,217,17,Mystic (blue),2,school,Clear sky,day,no,7,1,yes
+9/17/2016 10:33,Dragonite,Dragon,,10,25,Mystic (blue),400,school,Rain,night,yes,6,60,yes
+9/17/2016 10:36,Pidgey,Flying, Normal,1000,5,Valor (red),65,sports centre,Cloudy,day,no,6,50,yes
+9/17/2016 10:37,Muk,Poison,,60,12,Instinct (yellow),10,student hall,Rain,day,no,5,2,yes
+9/17/2016 13:27,Magnemite,Electric, Steel,125,5,Instinct (yellow),5,forest (around NTU),Clear sky,day,no,3,4,yes
+9/19/2016 10:01,Oddish,Grass, Poison,114,17,Mystic (blue),15,school,Cloudy,day,no,12,1,no
+9/19/2016 13:03,Rattata,Normal,,183,17,Mystic (blue),0,school,Clear sky,day,no,12,1,no
+9/19/2016 14:05,Pidgey,Flying, Normal,10,21,Valor (red),10,library,Clear sky,day,no,4,2,no
+9/19/2016 14:43,Jigglypuff,Fairy, Normal,444,25,Mystic (blue),5,school,Clear sky,day,no,4,2,yes
+9/19/2016 15:14,Rattata,Normal,,33,12,Valor (red),1,school,Clear sky,day,no,6,1,no
+9/19/2016 16:18,Ekans,Poison,,10,3,haven't chosen yet,2,school,Clear sky,day,no,0,4,no
+9/19/2016 16:44,Ekans,Poison,,114,8,Mystic (blue),5,school,Clear sky,day,no,5,1,no
+9/19/2016 18:04,Krabby,Water,,49,14,Mystic (blue),0,school,Clear sky,night,no,5,1,no
+9/19/2016 18:07,Krabby,Water,,286,17,Mystic (blue),0,school,Cloudy,day,no,12,2,yes
+9/19/2016 18:46,Golbat,Flying, Poison,26,2,haven't chosen yet,10,school,Cloudy,night,no,2,7,no
+9/19/2016 18:48,Rattata,Normal,,22,2,haven't chosen yet,5,school,Cloudy,night,no,2,1,no
+9/19/2016 18:50,Bellsprout,Grass, Poison,14,2,haven't chosen yet,3,school,Cloudy,night,no,2,4,no
+9/19/2016 18:55,Rattata,Normal,,10,2,haven't chosen yet,6,school,Cloudy,night,no,2,1,no
+9/19/2016 20:11,Rattata,Normal,,10,2,Valor (red),0,student hall,Cloudy,night,no,0,1,no
+9/19/2016 20:12,Charmander,Fire,,12,2,Valor (red),1,student hall,Cloudy,night,no,0,1,no
+9/20/2016 10:41,Rattata,Normal,,36,3,Valor (red),2,student hall,Cloudy,day,no,2,2,no
+9/20/2016 10:42,Pidgey,Flying, Normal,10,3,Valor (red),2,school,Cloudy,day,no,1,1,no
+9/20/2016 10:43,Eevee,Normal,,74,4,Valor (red),3,school,Cloudy,day,no,2,3,no
+9/20/2016 10:44,Poliwag,Water,,10,3,Valor (red),2,library,Cloudy,day,no,2,3,no
+9/20/2016 10:45,Koffing,Poison,,78,3,Valor (red),2,library,Cloudy,day,no,3,4,no
+9/20/2016 10:46,Meowth,Normal,,32,3,Valor (red),3,library,Cloudy,day,no,2,2,no
+9/20/2016 10:47,Magikarp,Water,,10,2,Valor (red),1,student hall,Cloudy,day,no,4,2,no
+9/20/2016 10:48,Psyduck,Water,,41,2,Valor (red),3,school,Cloudy,day,no,2,2,no
+9/20/2016 10:49,Venonat,Bug, Poison,41,2,Valor (red),3,student hall,Cloudy,day,no,4,3,no
+9/20/2016 10:51,Spearow,Flying, Normal,26,4,Valor (red),5,school,Cloudy,day,no,7,1,no
+9/20/2016 12:12,Koffing,Poison,,108,4,Valor (red),4,school,Cloudy,day,no,4,2,no
+9/20/2016 12:13,Krabby,Water,,53,4,Valor (red),4,school,Cloudy,day,no,5,1,no
+9/20/2016 12:16,Pidgey,Flying, Normal,26,4,Valor (red),4,school,Cloudy,day,no,5,1,no
+9/20/2016 12:17,Rattata,Normal,,53,4,Valor (red),5,school,Cloudy,day,no,5,3,no
+9/20/2016 12:18,Weedle,Bug, Poison,34,4,Valor (red),5,school,Cloudy,day,no,5,1,no
+9/20/2016 12:43,Pidgey,Flying, Normal,231,17,Mystic (blue),0,school,Clear sky,day,no,12,2,no
+9/20/2016 12:44,Caterpie,Bug,,129,17,Mystic (blue),0,school,Clear sky,day,no,12,1,no
+9/20/2016 12:46,Venonat,Bug, Poison,274,17,Mystic (blue),0,school,Clear sky,day,no,9,1,no
+9/20/2016 13:33,Rattata,Normal,,23,4,Valor (red),2,school,Cloudy,day,no,1,1,no
+9/20/2016 13:34,Rattata,Normal,,35,4,Valor (red),1,school,Cloudy,day,no,2,1,no
+9/20/2016 13:51,Horsea,Water,,104,8,Mystic (blue),1,school,Clear sky,day,no,5,1,no
+9/20/2016 13:52,Pidgey,Flying, Normal,124,8,Mystic (blue),1,school,Clear sky,day,no,5,3,no
+9/20/2016 18:59,Rattata,Normal,,10,8,Mystic (blue),1,canteen,Clear sky,day,no,1,2,no
+9/20/2016 19:27,Jigglypuff,Fairy, Normal,157,9,Instinct (yellow),1,school,Cloudy,day,yes,5,5,no
+9/20/2016 19:53,Weedle,Bug, Poison,25,8,Valor (red),0,school,Clear sky,day,no,8,1,no
+9/20/2016 19:54,Pidgeot,Flying, Normal,65,6,haven't chosen yet,0,school,Clear sky,night,no,3,1,no
+9/20/2016 19:54,Pidgey,Flying, Normal,111,8,Valor (red),1,school,Clear sky,day,no,7,1,no
+9/20/2016 19:55,Rattata,Normal,,78,8,Valor (red),2,school,Clear sky,day,no,7,1,no
+9/20/2016 20:04,Zubat,Flying, Poison,27,2,haven't chosen yet,1,school,Clear sky,night,no,4,17,no
+9/20/2016 20:06,Pidgey,Flying, Normal,25,2,haven't chosen yet,0,school,Clear sky,night,yes,4,1,no
+9/20/2016 20:08,Rattata,Normal,,10,2,haven't chosen yet,1,school,Clear sky,night,yes,4,1,no
+9/20/2016 20:38,Rattata,Normal,,37,3,haven't chosen yet,1,school,Clear sky,night,no,3,1,no
+9/20/2016 20:44,Weedle,Bug, Poison,34,4,Valor (red),1,school,Cloudy,night,no,2,1,no
+9/20/2016 20:45,Pidgey,Flying, Normal,25,4,Valor (red),1,school,Cloudy,night,no,1,2,no
+9/20/2016 20:47,Rattata,Normal,,22,5,Valor (red),1,school,Cloudy,night,no,1,1,no
+9/20/2016 20:48,Magikarp,Water,,10,5,Valor (red),1,student hall,Cloudy,night,no,1,1,no
+9/20/2016 20:48,Jigglypuff,Fairy, Normal,561,31,Mystic (blue),25,student hall,Clear sky,night,no,2,6,yes
+9/20/2016 20:49,Magikarp,Water,,22,5,Valor (red),1,student hall,Cloudy,night,no,1,2,no
+9/20/2016 20:50,Magikarp,Water,,10,5,Valor (red),1,student hall,Cloudy,night,no,1,1,no
+9/20/2016 20:50,Pidgey,Flying, Normal,10,5,Valor (red),1,student hall,Cloudy,night,no,1,5,no
+9/20/2016 20:51,Magikarp,Water,,24,5,Valor (red),1,student hall,Cloudy,night,no,0,1,no
+9/20/2016 20:51,Gastly,Ghost, Poison,256,31,Mystic (blue),1,student hall,Clear sky,night,no,2,3,yes
+9/20/2016 20:55,Eevee,Normal,,804,31,Mystic (blue),5,student hall,Clear sky,night,no,2,6,yes
+9/20/2016 21:17,Slowbro,Psychic, Water,504,24,Instinct (yellow),5,student hall,Cloudy,night,no,4,3,yes
+9/20/2016 21:47,Pidgey,Flying, Normal,124,7,Instinct (yellow),10,school,Clear sky,day,no,5,3,no
+9/20/2016 21:56,Venonat,Bug, Poison,101,9,Mystic (blue),1,school,Clear sky,day,no,3,2,no
+9/20/2016 22:22,Weedle,Bug, Poison,27,31,Mystic (blue),1,student hall,Clear sky,night,no,2,1,no
+9/20/2016 22:34,Weedle,Bug, Poison,139,18,Valor (red),1,school,Cloudy,day,no,3,1,no
+9/21/2016 9:21,Magikarp,Water,,24,5,Valor (red),1,student hall,Cloudy,night,no,0,1,no
+9/21/2016 9:22,Psyduck,Water,,12,5,haven't chosen yet,1,student hall,Cloudy,day,no,1,5,no
+9/21/2016 9:22,Rattata,Normal,,62,5,haven't chosen yet,1,student hall,Cloudy,day,no,0,1,no
+9/21/2016 9:23,Rattata,Normal,,10,5,haven't chosen yet,1,school,Cloudy,day,no,1,2,no
+9/21/2016 9:24,Weedle,Bug, Poison,14,5,haven't chosen yet,1,school,Cloudy,day,no,1,1,no
+9/21/2016 9:24,Rattata,Normal,,37,5,haven't chosen yet,1,school,Cloudy,day,no,1,1,no
+9/21/2016 9:25,Spearow,Flying, Normal,10,5,haven't chosen yet,1,school,Cloudy,day,no,0,4,no
+9/21/2016 9:26,Rattata,Normal,,69,5,haven't chosen yet,1,school,Cloudy,day,no,1,1,no
+9/21/2016 9:51,Gastly,Ghost, Poison,90,22,Mystic (blue),0,school,Clear sky,day,no,3,1,no
+9/21/2016 10:42,Pidgey,Flying, Normal,24,8,Mystic (blue),5,canteen,Clear sky,day,no,1,4,no
+9/21/2016 11:01,Bulbasaur,Grass, Poison,14,1,haven't chosen yet,1,student hall,Clear sky,night,no,0,1,no
+9/21/2016 11:02,Pidgey,Flying, Normal,23,2,haven't chosen yet,1,canteen,Clear sky,day,no,3,5,no
+9/21/2016 11:03,Pidgey,Flying, Normal,10,2,haven't chosen yet,1,canteen,Clear sky,day,no,3,1,no
+9/21/2016 11:03,Poliwag,Water,,116,6,haven't chosen yet,2,library,Cloudy,day,yes,2,2,no
+9/21/2016 11:04,Pidgey,Flying, Normal,90,6,haven't chosen yet,3,library,Cloudy,day,yes,2,2,no
+9/21/2016 11:05,Rattata,Normal,,10,6,haven't chosen yet,4,library,Cloudy,day,yes,2,1,no
+9/21/2016 11:06,Pidgey,Flying, Normal,87,6,haven't chosen yet,5,library,Cloudy,day,yes,2,2,no
+9/21/2016 11:08,Caterpie,Bug,,42,6,haven't chosen yet,5,library,Cloudy,day,yes,2,1,no
+9/21/2016 11:09,Spearow,Flying, Normal,10,6,haven't chosen yet,5,library,Cloudy,day,yes,2,1,no
+9/21/2016 11:10,Rattata,Normal,,37,6,haven't chosen yet,5,library,Cloudy,day,yes,2,1,no
+9/21/2016 11:15,Ekans,Poison,,29,6,haven't chosen yet,10,library,Cloudy,day,yes,2,2,no
+9/21/2016 11:20,Rattata,Normal,,36,6,Mystic (blue),20,library,Cloudy,day,no,2,1,no
+9/21/2016 11:21,Pidgey,Flying, Normal,10,2,haven't chosen yet,0,school,Clear sky,day,no,3,2,no
+9/21/2016 11:28,Pidgey,Flying, Normal,24,6,Mystic (blue),2,library,Cloudy,day,no,2,1,no
+9/21/2016 11:30,Paras,Bug, Grass,34,6,Mystic (blue),5,library,Cloudy,day,no,2,1,no
+9/21/2016 11:35,Rattata,Normal,,20,2,haven't chosen yet,6,school,Clear sky,day,no,3,1,no
+9/21/2016 11:36,Pidgey,Flying, Normal,10,2,haven't chosen yet,0,school,Clear sky,day,no,3,1,no
+9/21/2016 11:42,Pidgey,Flying, Normal,80,6,Mystic (blue),7,library,Cloudy,day,yes,2,1,no
+9/21/2016 11:44,Pidgey,Flying, Normal,75,7,Mystic (blue),7,library,Cloudy,day,yes,1,1,no
+9/21/2016 11:47,Raticate,Normal,,760,20,Mystic (blue),2,school,Clear sky,day,no,7,3,yes
+9/21/2016 11:53,Pidgey,Flying, Normal,108,20,Mystic (blue),1,school,Clear sky,day,no,6,2,no
+9/21/2016 11:54,Rattata,Normal,,34,7,Mystic (blue),10,library,Cloudy,day,yes,2,1,no
+9/21/2016 11:55,Pidgey,Flying, Normal,41,7,Mystic (blue),10,library,Cloudy,day,yes,2,2,no
+9/21/2016 11:59,Zubat,Flying, Poison,26,7,Mystic (blue),5,library,Cloudy,day,yes,2,12,no
+9/21/2016 12:05,Zubat,Flying, Poison,44,7,Mystic (blue),10,library,Cloudy,day,yes,2,4,no
+9/21/2016 12:21,Weedle,Bug, Poison,10,3,haven't chosen yet,0,school,Clear sky,day,no,3,2,no
+9/21/2016 12:22,Pidgey,Flying, Normal,10,3,haven't chosen yet,0,canteen,Clear sky,day,no,3,3,no
+9/21/2016 12:23,Weedle,Bug, Poison,53,20,Mystic (blue),0,school,Clear sky,day,no,2,1,no
+9/21/2016 12:24,Weedle,Bug, Poison,53,20,Mystic (blue),0,school,Clear sky,day,no,6,1,no
+9/21/2016 12:24,Pidgey,Flying, Normal,80,20,Mystic (blue),0,school,Clear sky,day,no,6,1,no
+9/21/2016 12:27,Rattata,Normal,,218,20,Mystic (blue),6,school,Clear sky,day,no,6,1,no
+9/21/2016 12:28,Rattata,Normal,,135,20,Mystic (blue),1,school,Clear sky,day,yes,6,1,no
+9/21/2016 12:33,Rattata,Normal,,218,20,Mystic (blue),5,school,Clear sky,day,yes,5,1,no
+9/21/2016 12:34,Rattata,Normal,,135,20,Mystic (blue),5,school,Clear sky,day,yes,5,1,no
+9/21/2016 12:35,Electabuzz,Electric,,890,20,Mystic (blue),7,school,Clear sky,day,no,5,1,yes
+9/21/2016 12:36,Rattata,Normal,,282,21,Instinct (yellow),0,school,Clear sky,day,yes,5,3,no
+9/21/2016 12:37,Rattata,Normal,,266,20,Mystic (blue),2,school,Clear sky,day,yes,5,4,no
+9/21/2016 12:38,Rattata,Normal,,10,20,Mystic (blue),1,school,Clear sky,day,yes,5,1,no
+9/21/2016 12:40,Rattata,Normal,,116,13,Mystic (blue),0,school,Clear sky,day,yes,6,1,yes
+9/21/2016 12:41,Venonat,Bug, Poison,132,22,Mystic (blue),5,school,Clear sky,day,yes,5,1,no
+9/21/2016 12:42,Venonat,Bug, Poison,72,13,Mystic (blue),2,school,Clear sky,day,yes,6,1,no
+9/21/2016 12:42,Venonat,Bug, Poison,13,20,Mystic (blue),2,school,Clear sky,day,yes,5,5,no
+9/21/2016 12:42,Venonat,Bug, Poison,475,21,Instinct (yellow),1,school,Clear sky,day,yes,6,2,no
+9/21/2016 12:42,Pidgey,Flying, Normal,183,22,Mystic (blue),3,student hall,Clear sky,night,no,3,1,no
+9/21/2016 12:43,Rattata,Normal,,162,22,Mystic (blue),4,canteen,Cloudy,day,no,1,1,no
+9/21/2016 12:44,Venonat,Bug, Poison,219,22,Mystic (blue),8,school,Clear sky,day,yes,5,1,no
+9/21/2016 12:45,Venonat,Bug, Poison,131,17,Valor (red),1,school,Clear sky,day,yes,2,1,no
+9/21/2016 12:45,Venonat,Bug, Poison,101,20,Valor (red),10,school,Clear sky,day,yes,10,2,no
+9/21/2016 12:45,Venonat,Bug, Poison,444,21,Instinct (yellow),2,school,Clear sky,day,yes,6,5,no
+9/21/2016 12:46,Venonat,Bug, Poison,101,20,Mystic (blue),2,school,Clear sky,day,yes,5,2,no
+9/21/2016 12:46,Venonat,Bug, Poison,13,20,Valor (red),1,school,Clear sky,day,yes,10,1,no
+9/21/2016 12:47,Spearow,Flying, Normal,79,17,Valor (red),3,school,Clear sky,day,yes,2,1,no
+9/21/2016 12:47,Spearow,Flying, Normal,44,22,Mystic (blue),5,school,Clear sky,day,yes,5,1,no
+9/21/2016 12:48,Venonat,Bug, Poison,582,23,Mystic (blue),1,school,Clear sky,day,no,15,2,no
+9/21/2016 12:49,Spearow,Flying, Normal,61,23,Mystic (blue),1,school,Clear sky,day,no,23,1,no
+9/21/2016 12:50,Weedle,Bug, Poison,63,17,Valor (red),3,school,Clear sky,day,yes,2,1,no
+9/21/2016 12:50,Weedle,Bug, Poison,10,20,Mystic (blue),2,school,Clear sky,day,yes,5,2,no
+9/21/2016 12:50,Weedle ,Bug, Poison,102,22,Mystic (blue),7,school,Clear sky,day,yes,5,1,no
+9/21/2016 12:51,Weedle,Bug, Poison,10,20,Valor (red),4,school,Clear sky,day,yes,10,1,no
+9/21/2016 12:52,Pidgey,Flying, Normal,199,23,Mystic (blue),1,school,Clear sky,day,no,10,1,no
+9/21/2016 12:53,Goldeen,Water,,442,17,Valor (red),3,school,Clear sky,day,yes,2,2,yes
+9/21/2016 12:53,Goldeen,Water,,122,20,Mystic (blue),2,school,Clear sky,day,yes,5,1,no
+9/21/2016 12:53,Goldeen,Water,,232,22,Mystic (blue),5,school,Clear sky,day,yes,5,2,no
+9/21/2016 12:53,Pidgey,Flying, Normal,312,23,Mystic (blue),1,school,Clear sky,day,no,18,2,no
+9/21/2016 12:54,Goldeen,Water,,232,13,Mystic (blue),3,school,Clear sky,day,yes,6,3,yes
+9/21/2016 12:54,Goldeen,Water,,122,20,Valor (red),3,school,Clear sky,day,yes,10,2,no
+9/21/2016 12:54,Caterpie,Bug,,125,23,Mystic (blue),3,school,Clear sky,night,no,3,2,no
+9/21/2016 12:55,Ekans,Poison,,453,12,Instinct (yellow),15,student hall,Clear sky,night,no,1,5,no
+9/21/2016 12:55,Goldeen,Water,,390,23,Mystic (blue),1,school,Clear sky,day,yes,18,1,no
+9/21/2016 12:57,Golduck,Water,,1123,17,Instinct (yellow),20,student hall,Clear sky,day,yes,2,9,yes
+9/21/2016 12:58,Starmie,Water,,1260,17,Instinct (yellow),15,student hall,Clear sky,night,no,2,7,yes
+9/21/2016 13:01,Dratini,Dragon,,368,11,Instinct (yellow),5,forest (around NTU),Clear sky,day,no,1,2,no
+9/21/2016 13:01,Pidgey,Flying, Normal,108,17,Valor (red),5,school,Clear sky,day,no,2,2,no
+9/21/2016 13:01,Pidgey,Flying, Normal,24,20,Mystic (blue),8,school,Clear sky,day,no,5,1,no
+9/21/2016 13:02,Slowpoke,Psychic, Water,1343,15,Instinct (yellow),15,forest (around NTU),Cloudy,night,no,4,8,yes
+9/21/2016 13:02,Pidgey,Flying, Normal,24,20,Valor (red),7,school,Clear sky,day,yes,10,1,no
+9/21/2016 13:02,Pidgey,Flying, Normal,191,22,Mystic (blue),10,school,Clear sky,day,no,5,1,no
+9/21/2016 13:09,Pidgey,Flying, Normal,24,2,haven't chosen yet,5,school,Cloudy,day,no,2,5,no
+9/21/2016 13:10,Goldeen,Water,,12,2,haven't chosen yet,5,school,Cloudy,day,no,2,1,no
+9/21/2016 13:10,Squirtle,Water,,13,2,haven't chosen yet,2,school,Cloudy,day,no,2,2,no
+9/21/2016 13:11,Pidgey,Flying, Normal,334,21,Instinct (yellow),5,school,Clear sky,day,no,6,1,no
+9/21/2016 13:12,Pidgey,Flying, Normal,249,3,haven't chosen yet,2,school,Cloudy,day,no,6,1,no
+9/21/2016 13:12,Poliwag,Water,,224,4,haven't chosen yet,5,library,Clear sky,day,no,5,3,no
+9/21/2016 13:14,Golbat,Poison,Flying,914,7,Instinct (yellow),5,canteen,Rain,night,no,6,3,yes
+9/21/2016 13:15,Vulpix,Fire,,354,12,Instinct (yellow),7,school,Cloudy,day,no,4,3,no
+9/21/2016 13:16,Eevee,Normal,,532,15,Instinct (yellow),10,canteen,Clear sky,night,no,5,5,no
+9/21/2016 13:17,Caterpie,Bug,,55,10,Valor (red),1,school,Clear sky,day,no,2,1,no
+9/21/2016 13:17,Lapras,Ice, Water,1797,21,Mystic (blue),20,school,Clear sky,day,yes,2,13,no
+9/21/2016 13:18,Pidgey,Flying, Normal,112,10,Valor (red),2,school,Cloudy,day,no,3,1,no
+9/21/2016 13:18,Golbat,Flying, Poison,1160,21,Mystic (blue),17,school,Clear sky,day,no,2,11,no
+9/21/2016 13:20,Weedle,Bug, Poison,46,10,Valor (red),1,school,Cloudy,day,no,5,1,no
+9/21/2016 13:20,Pinsir,Bug,,1050,21,Mystic (blue),10,school,Clear sky,day,no,2,6,no
+9/21/2016 13:21,Koffing,Poison,,48,13,Mystic (blue),3,school,Clear sky,night,no,6,1,no
+9/21/2016 13:22,Koffing,Poison,,280,10,Valor (red),2,school,Clear sky,day,no,5,1,no
+9/21/2016 13:22,Pidgey,Flying, Normal,182,13,Mystic (blue),4,school,Clear sky,day,no,6,2,no
+9/21/2016 13:22,Slowpoke,Psychic, Water,652,21,Mystic (blue),2,school,Clear sky,day,no,2,4,no
+9/21/2016 13:23,Ekans,Poison,,443,21,Mystic (blue),3,school,Clear sky,day,no,2,2,no
+9/21/2016 13:24,Krabby,Water,,436,21,Mystic (blue),2,school,Clear sky,day,no,2,2,no
+9/21/2016 13:25,Kakuna,Bug, Poison,80,10,Valor (red),5,school,Cloudy,day,no,2,1,no
+9/21/2016 13:26,Squirtle ,Water,,13,1,haven't chosen yet,1,school,Clear sky,day,no,2,4,no
+9/21/2016 13:26,Paras,Bug, Grass,203,10,Valor (red),8,school,Clear sky,day,no,4,2,no
+9/21/2016 13:26,Dodrio,Flying, Normal,445,21,Mystic (blue),3,school,Clear sky,night,no,2,3,no
+9/21/2016 13:26,Eevee,Normal,,336,21,Mystic (blue),1,school,Clear sky,night,no,2,1,no
+9/21/2016 13:27,Rattata,Normal,,107,10,Valor (red),3,school,Clear sky,day,no,3,1,no
+9/21/2016 13:27,Koffing,Poison,,148,17,Valor (red),15,school,Clear sky,day,no,2,1,no
+9/21/2016 13:27,Snorlax,Normal,,1362,21,Mystic (blue),10,school,Clear sky,night,yes,2,8,yes
+9/21/2016 13:28,Staryu,Water,,12,10,Valor (red),3,school,Clear sky,day,no,5,1,no
+9/21/2016 13:28,Pidgey,Flying, Normal,310,21,Mystic (blue),1,school,Clear sky,night,no,2,1,no
+9/21/2016 13:29,Zubat,Flying, Poison,75,10,Valor (red),5,school,Cloudy,day,yes,5,2,no
+9/21/2016 13:33,Weedle,Bug, Poison,49,10,Valor (red),3,school,Clear sky,day,yes,5,1,no
+9/21/2016 13:35,Magikarp,Water,,36,10,Valor (red),2,school,Cloudy,day,yes,2,1,no
+9/21/2016 13:36,Koffing,Poison,,49,10,Valor (red),5,school,Clear sky,day,yes,3,1,no
+9/21/2016 13:37,Pidgey,Flying, Normal,126,10,Valor (red),4,school,Cloudy,day,no,5,2,no
+9/21/2016 13:45,Charmander,Fire,,555,15,Valor (red),8,student hall,Rain,day,no,2,20,yes
+9/21/2016 13:48,Rattata,Normal,,181,12,Valor (red),0,canteen,Clear sky,day,no,2,2,no
+9/21/2016 13:49,Pidgey,Flying, Normal,67,15,Instinct (yellow),1,park (Yunan Garden),Clear sky,day,no,2,1,no
+9/21/2016 13:49,Raticate,Normal,,324,18,Mystic (blue),6,school,Clear sky,day,no,5,7,yes
+9/21/2016 13:51,Raticate,Normal,,18,10,Valor (red),5,school,Clear sky,day,yes,4,1,no
+9/21/2016 13:51,Golbat,Flying, Poison,304,16,Valor (red),5,forest (around NTU),Cloudy,night,no,3,6,yes
+9/21/2016 13:52,Spearow,Flying, Normal,143,10,Valor (red),8,school,Cloudy,day,yes,4,2,no
+9/21/2016 13:52,Pikachu,Electric,,326,17,Instinct (yellow),10,library,Rain,day,no,2,6,yes
+9/21/2016 13:52,Golbat,Flying, Poison,392,20,Mystic (blue),13,school,Cloudy,night,yes,7,11,yes
+9/21/2016 13:54,Sandslash,Ground,,432,22,Mystic (blue),15,school,Clear sky,day,no,6,13,yes
+9/21/2016 13:54,Venusaur,Grass, Poison,762,22,Valor (red),12,forest (around NTU),Cloudy,day,yes,1,14,yes
+9/21/2016 13:55,Staryu,Water,,91,10,Valor (red),4,school,Cloudy,day,yes,2,1,no
+9/21/2016 13:56,Gyarados,Flying, Water,620,21,Mystic (blue),3,canteen,Cloudy,night,no,1,7,yes
+9/21/2016 13:57,Caterpie,Bug,,11,8,Instinct (yellow),3,sports centre,Clear sky,day,no,4,10,no
+9/21/2016 13:57,Caterpie,Bug,,11,8,Instinct (yellow),3,sports centre,Clear sky,day,no,4,10,no
+9/21/2016 13:57,Pidgeot,Flying, Normal,443,10,Valor (red),7,school,Clear sky,day,yes,6,3,no
+9/21/2016 13:57,Paras,Bug, Grass,231,16,Mystic (blue),8,forest (around NTU),Cloudy,day,no,4,5,no
+9/21/2016 13:58,Weedle,Bug, Poison,111,7,Instinct (yellow),14,canteen,Cloudy,night,no,0,3,no
+9/21/2016 13:58,Weedle,Bug, Poison,111,7,Instinct (yellow),14,canteen,Cloudy,night,no,0,3,no
+9/21/2016 13:58,Butterfree,Bug, Flying,232,11,Valor (red),7,student hall,Cloudy,day,no,4,6,yes
+9/21/2016 13:58,Golduck ,Water,,374,12,Mystic (blue),13,school,Clear sky,day,no,3,12,no
+9/21/2016 13:59,Blastoise,Water,,652,21,Mystic (blue),17,water body (Nanyang Lake),Rain,night,yes,2,17,yes
+9/21/2016 14:01,Eevee,Normal,,512,16,Valor (red),7,library,Cloudy,day,yes,2,7,no
+9/21/2016 14:01,Rapidash,Fire,,593,24,Mystic (blue),15,school,Clear sky,day,no,5,7,yes
+9/21/2016 14:02,Raticate,Normal,,501,14,Instinct (yellow),7,canteen,Cloudy,night,no,2,8,no
+9/21/2016 14:02,Squirtle,Water,,521,26,Mystic (blue),8,sports centre,Cloudy,day,no,4,4,yes
+9/21/2016 14:03,Pidgeotto,Flying, Normal,532,20,Valor (red),7,school,Cloudy,day,yes,1,6,yes
+9/21/2016 14:03,Pidgeotto,Flying, Normal,532,20,Valor (red),7,school,Cloudy,day,yes,1,6,yes
+9/21/2016 14:04,Pidgeotto,Flying, Normal,326,17,Instinct (yellow),6,park (Yunan Garden),Cloudy,day,no,2,6,no
+9/21/2016 14:04,Gengar,Ghost, Poison,601,25,Valor (red),16,school,Rain,night,no,4,12,yes
+9/21/2016 14:06,Poliwag,Water,,51,10,Valor (red),5,school,Clear sky,day,yes,5,1,no
+9/21/2016 14:06,Charmander,Fire,,451,16,Instinct (yellow),5,canteen,Clear sky,day,yes,2,7,yes
+9/21/2016 14:07,Kingler,Water,,367,18,Instinct (yellow),5,school,Cloudy,day,no,2,6,yes
+9/21/2016 14:07,Goldeen,Water,,546,22,Mystic (blue),3,school,Clear sky,day,no,5,1,no
+9/21/2016 14:08,Goldeen,Water,,273,11,Mystic (blue),1,school,Clear sky,day,no,2,1,no
+9/21/2016 14:08,Goldeen,Water,,117,13,Mystic (blue),1,school,Clear sky,day,no,5,2,no
+9/21/2016 14:19,Pidgeot,Flying, Normal,624,16,Instinct (yellow),10,forest (around NTU),Cloudy,night,no,4,8,yes
+9/21/2016 14:20,Pidgey,Flying, Normal,78,6,Mystic (blue),2,school,Cloudy,day,no,4,2,no
+9/21/2016 14:21,Exeggutor,Grass, Psychic,1644,21,Valor (red),10,forest (around NTU),Clear sky,day,no,3,17,yes
+9/21/2016 14:22,Gyarados,Flying, Water,1533,21,Mystic (blue),7,water body (Nanyang Lake),Rain,night,yes,3,14,yes
+9/21/2016 14:24,Poliwag,Water,,457,21,Mystic (blue),8,water body (Nanyang Lake),Rain,day,no,2,8,no
+9/21/2016 14:31,Rattata,Normal,,100,21,Mystic (blue),3,school,Clear sky,day,no,5,1,no
+9/21/2016 15:01,Rattata,Normal,,187,22,Mystic (blue),5,school,Clear sky,day,no,3,1,no
+9/21/2016 15:08,Rattata,Normal,,100,21,Mystic (blue),3,school,Clear sky,day,no,5,1,no
+9/21/2016 15:09,Pidgey,Flying,,131,21,Mystic (blue),1,school,Cloudy,day,yes,5,1,no
+9/21/2016 15:10,Pidgey,Flying,,90,21,Mystic (blue),3,school,Cloudy,day,yes,5,1,no
+9/21/2016 15:12,Pidgey,Flying,,72,21,Mystic (blue),5,school,Cloudy,day,yes,5,1,no
+9/21/2016 15:30,Staryu,Water,,543,21,Instinct (yellow),1,school,Clear sky,day,no,5,1,no
+9/21/2016 15:36,Venonat,Bug,,208,15,Mystic (blue),1,school,Cloudy,day,yes,6,2,no
+9/21/2016 15:37,Rattata,Normal,,10,15,Mystic (blue),1,school,Cloudy,day,yes,5,4,no
+9/21/2016 15:38,Snorlax,Normal,,226,15,Mystic (blue),12,school,Cloudy,day,yes,6,1,yes
+9/21/2016 15:38,Pidgey,Flying, Normal,327,20,Instinct (yellow),1,school,Clear sky,day,no,6,2,no
+9/21/2016 15:40,Ratata,Normal,,162,15,Mystic (blue),5,school,Cloudy,day,yes,7,3,no
+9/21/2016 15:40,Pidgey,Flying,,72,21,Mystic (blue),5,school,Cloudy,day,yes,5,1,no
+9/21/2016 15:41,Pidgey,Flying,,327,21,Mystic (blue),0,school,Cloudy,day,no,5,2,no
+9/21/2016 15:41,Spearow,Flying, Normal,61,15,Mystic (blue),3,school,Cloudy,day,yes,7,2,no
+9/21/2016 15:43,Pidgeotto,Flying, Normal,111,15,Mystic (blue),6,school,Cloudy,day,yes,4,2,no
+9/21/2016 16:18,Koffing,Poison,,78,12,Instinct (yellow),1,school,Cloudy,day,yes,8,2,no
+9/21/2016 16:20,Pidgey,Flying, Normal,43,12,Instinct (yellow),1,school,Cloudy,day,no,8,1,no
+9/21/2016 16:22,Pidgey,Flying, Normal,359,12,Instinct (yellow),3,school,Cloudy,day,yes,8,1,no
+9/21/2016 16:33,Rattata,Normal,,143,12,Instinct (yellow),10,school,Cloudy,day,no,8,1,no
+9/21/2016 16:45,Spearow,Flying, Normal,277,12,Instinct (yellow),6,school,Cloudy,day,no,8,1,no
+9/21/2016 17:19,Dratini,Dragon,,485,19,Instinct (yellow),1,student hall,Clear sky,day,no,4,1,no
+9/21/2016 17:32,Pidgey,Flying, Normal,82,17,Valor (red),0,school,Rain,day,no,5,2,no
+9/21/2016 17:41,Magmar,Fire,,253,16,Instinct (yellow),2,school,Clear sky,day,no,5,2,yes
+9/21/2016 19:52,Machop,Fighting,,87,4,haven't chosen yet,5,sports centre,Clear sky,night,no,3,2,no
